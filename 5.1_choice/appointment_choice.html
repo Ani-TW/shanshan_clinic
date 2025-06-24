@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../general/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>預約出談</title>
+</head>
+<body>
+<!---------- 頂端列 ---------->   
+    <header>
+        <a href="../index.html">
+            <img src="../img/logo.svg" alt="橫式logo"> <!-- logo -->
+        </a>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a href="../5.1_choice/appointment_choice.html">
+                        <h3>預約初談</h3>
+                    </a>
+                    <ol>
+                        <li>
+                            <a href="../5.3_search/appointment_search.html">
+                                <img class="icon_img" src="../img/icon/check.png" alt="預約icon">
+                                <h3>預約查詢</h3>
+                            </a>
+                        </li>
+                    </ol>
+                
+                </li>
+                <li>
+                    <a href="../3_services/services.html">
+                        <h3>服務項目</h3>
+                    </a>
+                </li>
+                <li>
+                    <a href="../4_news/news.html">
+                        <h3>最新消息</h3>
+                    </a>
+                    <ol>
+                        <li>
+                            <a href="../4_news/news.html">
+                                <img class="icon_img" src="../img/icon/news.png" alt="專欄icon">
+                                <h3>文章專欄</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img class="icon_img" src="../img/icon/activity.png" alt="活動icon">
+                                <h3>活動資訊</h3>
+                            </a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="">
+                        <h3>關於山山</h3>
+                    </a>
+                    <ol>
+                        <li>
+                            <a href="../2_about_teams/about_teams.html">
+                                <img class="icon_img" src="../img/icon/team.png" alt="團隊icon">
+                                <h3>團隊介紹</h3>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img class="icon_img" src="../img/icon/environment.png" alt="環境icon">
+                                <h3>環境介紹</h3>
+                            </a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="">
+                        <h3>聯絡我們</h3>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+            
+    </header>   
+
+
+
+    <div class="wrapper">
+
+        <!-------------治療流程------------->
+        <section class="flow">
+            <h1 class="title">
+                <img src="../img/icon/leaf2.png" alt="leaf">
+                治療流程
+                <img src="../img/icon/leaf.png" alt="leaf">
+            </h1>
+
+            <ol>
+                <li>
+                    <span>01</span>
+                    <h2>線上預約</h2>
+                </li>
+                <li>
+                    <span>02</span>
+                    <h2>電話訪談</h2>
+                </li>
+                <li>
+                    <span>03</span>
+                    <h2>初談評估</h2>
+                </li>
+                <li>
+                    <span>04</span>
+                    <h2>治療療程</h2>
+                </li>
+            </ol>
+        </section>
+
+        <img class="Line" src="../img/Line1.svg" alt="隔線">
+
+        <!-------------初次評估------------->
+        <section class="first_assess">
+            <div class="assess_left">
+                <ul>
+                    <li>
+                        <img class="yellowbird" src="../img/icon/yellowbird.png" alt="黃鳥">
+                        <h2>初次評估</h2>
+                    </li>
+                    <li>50分鐘/1500元起</li>
+                </ul>
+
+                <p>針對整體動作功能、發展里程碑、手功能與精細操作、注意力與視知覺、學習能力、社交互動、團體適應、衝動控制及情緒調節等項目做專業評估，透過詳細的訪談，分析真實情境中遇到的主要問題，且提供相關策略建議。</p>
+            </div>
+
+            <img class="hug" src="../img/抱心心.png" alt="hugheart">
+        </section>
+
+        <img class="Line" src="../img/Line1.svg" alt="隔線">
+
+
+        <!-------------預約初談------------->
+        <section class="appointment">
+            <h1 class="title">
+                <img src="../img/icon/leaf2.png" alt="leaf">
+                <span>預約初談</span>
+                <img src="../img/icon/leaf.png" alt="leaf">
+            </h1>
+
+            <ul>
+                <li class="weeks">
+                    <button>←上一週</button>
+                    <button>下一週→</button>
+                </li>
+                <li>
+                    <p class="dates">2025/06/23~2025/06/28</p>
+                    <p>點選想預約的時段，點進馬上預約輸入預約資料</p>
+                </li>
+            </ul>
+            
+            <!--日期表格--> 
+            <table>
+                <thead>
+                    <tr>
+                        <td>時段</td>
+                        <td class="time">10:00~12:00</td>
+                        <td class="time">14:00~16:00</td>
+                        <td class="time">19:00~21:00</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="date">
+                            <span>一</span>
+                            <p>06/23</p>
+                        </td>
+                        <td class="yesno">                    
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-regular fa-circle fa-xl" style="color: #191919;"></i></td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-regular fa-circle fa-xl" style="color: #191919;"></i></td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-solid fa-xmark fa-2xl" style="color: #191919;"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="date">
+                            <span>二</span>
+                            <p>06/24</p>
+                        </td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-regular fa-circle fa-xl" style="color: #191919;"></i>
+                            
+                        </td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-solid fa-xmark fa-2xl" style="color: #191919;"></i></td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-regular fa-circle fa-xl" style="color: #191919;"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="date">
+                            <span>三</span>
+                            <p>06/25</p>
+                        </td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-regular fa-circle fa-xl" style="color: #191919;"></i></td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-solid fa-xmark fa-2xl" style="color: #191919;"></i></td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-regular fa-circle fa-xl" style="color: #191919;"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="date">
+                            <span>四</span>
+                            <p>06/26</p>
+                        </td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-solid fa-xmark fa-2xl" style="color: #191919;"></i></td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-regular fa-circle fa-xl" style="color: #191919;"></i></td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-regular fa-circle fa-xl" style="color: #191919;"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="date">
+                            <span>五</span>
+                            <p>06/27</p>
+                        </td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-regular fa-circle fa-xl" style="color: #191919;"></i></td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-solid fa-xmark fa-2xl" style="color: #191919;"></i></td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-regular fa-circle fa-xl" style="color: #191919;"></i></td>
+                    </tr>
+                    <tr>
+                        <td class="date">
+                            <span>六</span>
+                            <p>06/28</p>
+                        </td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-regular fa-circle fa-xl" style="color: #191919;"></i></td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-regular fa-circle fa-xl" style="color: #191919;"></i></td>
+                        <td class="yesno">
+                            <a href="../5.2_infoKeyIn/appointment_infoKeyIn.html">馬上預約</a>
+                            <i class="fa-regular fa-circle fa-xl" style="color: #191919;"></i></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </section>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+        <!------------頁尾------------>
+        <footer>
+            <div class="footer_main">
+                <!-- 左邊區塊:logo聯絡 -->
+                <div class="logo_text">
+                
+                    <div class="LogoImg"><!-- logo圖案區 -->
+                        <div class="footer_logo">
+                            <img src="../img/logo.svg" alt="橫式logo">
+                        </div>
+
+                        <div class="footer_icons">   <!-- 三個小icon -->
+                            <a href="">
+                                <img class="footer_icon" src="../img/icon/IG.png" alt="IGicon">
+                            </a>
+                            <a href="">
+                                <img class="footer_icon" src="../img/icon/email.png" alt="Mailicon">
+                            </a>
+                            <a href="">
+                                <img class="footer_icon" src="../img/icon/FB.png" alt="FBicon">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 文字區 -->
+                    <div class="center_text">
+                        <ul>
+                            <li>
+                                <h5>電話</h5>
+                                <h5>地址</h5>
+                                <h5>Line</h5>
+                                <h5>Mail</h5>
+                            </li>
+                            <li>
+                                <p>02-82122000</p>
+                                <p>台北市中和區中和路450號</p>
+                                <p>@starpier</p>
+                                <p>shanshan@gmail.com</p>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+                
+                <!-- 右邊區塊:地圖 -->
+                <div class="mapplace">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.8960746053212!2d121.50949634082693!3d25.003647077928335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9dda5c67ebb%3A0xe3c801e3a64f19f5!2zMjM15paw5YyX5biC5Lit5ZKM5Y2A5Lit5ZKM6LevNDUw6Jmf!5e0!3m2!1szh-TW!2stw!4v1750163927064!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            
+            <!-- copyright -->
+            <h5 class="copyright"><p>© 2025 ShanShan. All rights reserved.</p></h5>
+            <h5 class="copyright"><p>本網站為TibaMe_前端設計工程師班學員專題成果作品，本平台僅供學習、展示之用。</p></h5>
+        </footer>
+
+    </div>
+    
+
+</body>

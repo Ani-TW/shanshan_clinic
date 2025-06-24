@@ -1,0 +1,88 @@
+@import url(../reset.css);
+
+
+.banner{
+    background-image: url(../img/photo/banner/04.jpg);
+    width: 120rem;
+    height: 25rem;
+    background-size:cover;
+    background-position: center;
+    opacity: 80%;
+    margin-bottom: 4.8rem;    
+}
+
+
+ /* <!---------- 標題 ----------> */
+.wrapper > h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+ }
+
+.wrapper > h1 img{
+    height: 6.5rem;
+}
+
+
+.wrapper > p{
+    font-size: 2.4rem;
+    line-height: 120%;
+    color: #BD8E3D ;
+    text-align: center;
+    margin: 2.4rem 0 ;
+}
+
+.wrapper > h2{
+    padding-left: 12rem;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper label{
+    font-size: 2.4rem;
+    line-height: 120%;
+    margin-right: 1.6rem;
+}
+
+.wrapper input{
+    width: 30rem;
+    height: 5.2rem;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 1rem;
+    padding-left: 2rem;
+    font-size: 1.8rem;
+}
+
+.info1 , .info2{
+    padding-left: 12rem;
+    margin-top: 2.4rem;
+}
+
+#name {
+    margin-right: 4.8rem;
+}
+
+
+/* <!------------送出查詢------------> */
+.wrapper .btn{
+    display: flex;
+    justify-content: center;
+    margin: 4.8rem 0 12rem;
+}
+
+.wrapper .btn a{
+    text-decoration: none;
+    color: rgb(25, 25, 25);
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper a span{
+    font-size: 2.4rem;
+    line-height: 100%;
+    padding: 2rem 4rem ;
+    background-color: #F0CA3B;
+    border-radius: 999px;
+}
+

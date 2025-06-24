@@ -1,0 +1,89 @@
+@import url(../reset.css);
+
+.banner{
+    background-image: url(../img/photo/banner/03.avif);
+    width: 120rem;
+    height: 25rem;
+    background-size:cover;
+    background-position: center;
+    opacity: 80%;
+    margin-bottom: 7.2rem;
+}
+
+.line{
+    display: block;
+    margin: 7.2rem auto;
+}
+
+.wrapper p{
+    width: 72rem;
+    font-size: 1.8rem;
+    line-height: 160%;
+}
+
+.price{
+    font-size: 2.4rem;
+    line-height: 120%;
+    color:#F6A89E ;
+}
+
+.title > li:first-child{
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.special{
+    flex-direction: row-reverse;
+    justify-content: start;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem; ;
+    align-items: center;
+    justify-content: center;
+}
+
+.area{
+    display: flex;
+    gap: 6rem;
+
+    justify-content: center;
+}
+
+.section5{
+    margin-bottom: 7.2rem;
+}
+
+.down{
+    /* border: 1px solid red; */
+    margin-top: 3.6rem;
+}
+
+.therpylist{
+    display: flex;
+    gap: 6rem ;
+    justify-content: center;
+
+}
+
+.therpylist h2{
+    /* border: 1px solid blue; */
+    background-color: #FFFAED;
+    border-radius: 999px;
+    text-align: center;
+    line-height: 8rem;
+    margin-bottom: 2.4rem;
+
+}
+
+.therpylist p{
+    width: 22rem;
+    padding: 0 1rem;
+}
+
+.section2 , .section4{
+    flex-direction: row-reverse;
+}

@@ -1,0 +1,243 @@
+@import url(../reset.css);
+
+/* ---------- 上方橫幅 ----------*/
+.banner{
+    background-image: url(../img/photo/banner/02.avif);
+    width: 120rem;
+    height: 25rem;
+    background-size:cover;
+    background-position: center;
+    opacity: 80%;
+    margin-bottom: 6rem;
+}
+
+
+  /* <!---------- 標題 ----------> */
+.wrapper > h1{
+    font-size: 4.8rem ;
+    display: flex;
+    gap: 1.2rem ;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 0 auto 1.6rem;
+}
+
+.wrapper > h1 img{
+    width: 6.5rem;
+}
+
+/* <!---------- 選擇鈕 ----------> */
+.checkbtn{
+    /* border: 1px solid red; */
+    font-size: 1.6rem;
+    line-height: 100%;
+    margin: 0 auto 6rem;
+
+    display: flex;
+    width: 50rem;
+    flex-wrap: wrap;
+    gap: .8rem;
+    justify-content: center;
+}
+
+.checkbtn label{
+    border: 1px solid #BD8E3D;
+    padding: 1rem;
+    border-radius: 999px ;
+    cursor: pointer;
+}
+
+.checkbtn input{
+    /* display: none; */
+}
+
+/* select後的效果 暫時用hover代替 */
+.checkbtn label:hover{
+    color: #FFF8E5;
+    background-color: #BD8E3D;
+}
+
+
+/* <!---------- 文章區 ---------->  */
+
+article p{
+    font-size: 1.8rem;
+    line-height: 160%;
+    
+}
+
+article h5{
+    font-size: 1.6rem;
+}
+
+article a:first-child img{ 
+    display: block;
+    width: 100%;
+    /* height: 25rem; */
+    object-fit: cover;
+    border-radius: 2rem;
+
+    
+}
+
+article a:last-child img{
+
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    transform: rotate(90deg);
+
+}
+
+
+article ul li{
+    max-width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 2.4rem;
+}
+
+article ul li a:last-child{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-decoration: none;
+    color: rgb(25, 25, 25);
+    font-size: 1.8rem;
+    line-height: 120%;
+    
+    /* padding-right: 1.2rem; */
+
+    align-self:flex-start;
+}
+
+article ul li a:last-child img{
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+article ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4.8rem;
+    padding: 0 2.4rem 6rem ;
+
+}
+
+
+/*圖片hover效果*/
+article a:first-child{
+    position: relative;
+}
+
+
+
+article a:first-child:hover::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+    animation: before 0.5s linear forwards;
+
+    backdrop-filter: grayscale(0)  blur(0px);
+
+}
+
+@keyframes before{
+    0%{backdrop-filter: grayscale(0)  blur(0px);}
+    100%{backdrop-filter: grayscale(0.7)  blur(2px);}
+}
+
+article a:first-child:hover::after{
+    content: "view more";
+    display: block;
+
+    width: auto;
+    height: auto;
+    font-size: 3.2rem;
+    text-align: center;
+    padding: 1rem;
+    
+    color: #FFF;
+    border: 1px solid #fff;
+
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+} 
+
+
+
+/*閱讀全文hover效果*/
+article li a:last-child{
+    position: relative;
+    z-index: 0;
+}
+
+
+article li a:last-child::before{
+    content: "";
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+
+    background-color: #F0CA3B;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 7.2rem;
+    border-radius: 999px;
+
+    z-index: -1;
+}
+
+
+article a:last-child:hover::before{
+    animation: read 0.5s linear 0.3s forwards;
+    
+
+}
+
+
+@keyframes read {
+    0%{
+        width: 2.4rem;
+        height: 2.4rem;
+        right: 7.2rem;
+    }
+    100%{
+        width: 10.2rem;
+        height: 3.6rem;
+        right: -0.6rem;
+    }
+}
+
+article a:last-child:hover img{
+    animation: arrow 0.5s linear 0.3s forwards;
+}
+
+@keyframes arrow{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(540deg);
+    }
+}

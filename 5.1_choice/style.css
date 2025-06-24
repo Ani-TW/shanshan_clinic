@@ -1,0 +1,266 @@
+@import url(../reset.css);
+
+
+/*-----------治療流程-----------*/
+.flow{
+    padding-top: 4.8rem; ;
+}
+
+.title img{
+    width: 6.5rem;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.flow ol{
+    display: flex;
+    gap: 2.4rem ;
+    justify-content: center;
+    margin-top: 3.6rem;
+}
+
+.flow li{
+    width: 20rem;
+    height: 20rem;
+    background-image: url(../img/流程圓框.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center  bottom;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #BD8E3D;
+
+}
+
+.flow span{
+    font-size: 3.2rem;
+    line-height: 120%;
+}
+
+.flow ol > li:nth-child(even){
+   background-image: url(../img/流程圓框2png.png);
+}
+
+
+/* -------------隔線-------------*/
+.wrapper > img{
+    display: block;
+    margin: 3.6rem auto 4.8rem;
+
+}
+
+
+
+/* -------------初次評估-------------*/
+.first_assess{
+    display: flex;
+    gap: 3.6rem ;
+    padding-left: 15rem;
+}
+
+.assess_left{
+    width: 60rem;
+}
+
+.yellowbird{
+    width: 6.5rem;
+}
+
+.assess_left li{
+    display: flex;
+    gap: 0.4rem;
+    align-items: center;
+
+}
+
+.assess_left ul li:last-child{
+    color:#F6A89E;
+    font-size: 2.4rem;
+    line-height: 120%;
+
+}
+
+.assess_left p{
+    font-size: 2.4rem;
+    line-height: 160%;
+    margin-top: 3.6rem;
+}
+
+
+
+
+/* -------------預約初談-------------*/
+.appointment{
+    margin-bottom: 6rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+
+.appointment ul{
+    width: 100%;
+    padding: 0 12rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 0.8rem;
+
+    margin-bottom: 0.4rem;
+}
+
+.weeks{
+    display: flex;
+    gap: 0.4rem;
+}
+
+.weeks button{  
+    all: unset;   /*移除按鈕預設*/
+    cursor: pointer; /*移過去有手手*/
+
+
+    display: block;
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: rgb(25, 25, 25);
+    border: 1px solid rgb(25, 25, 25);
+    padding: 1rem 1rem;
+    border-radius: 999px;
+}
+
+.weeks button:hover{
+    background-color: #ccc;
+    
+
+}
+
+.appointment ul li:last-child{
+    display: flex;
+    justify-content: space-between;
+}
+
+.appointment ul li:last-child p{
+    font-size: 2.4rem;
+    line-height: 120%;
+}
+
+.appointment ul li:last-child p:last-child{
+    color:#F6A89E;
+}
+
+
+
+/* <!--日期表格--> */
+table{
+    background-color:#FFF8E5;
+    height: 100%;
+}
+
+table tr{
+    
+}
+
+table td{
+    font-size: 2.4rem;
+    line-height: 160%;
+    text-align: center;
+    border: 5px solid #FFF8E5;
+    padding: 1rem 5rem;  
+}
+
+table .date{
+    display: flex;
+    gap: 1.2rem;
+}
+
+table .yesno{
+    background-color: #FFF;
+}
+
+
+
+
+.yesno{
+  background-color: #fff;
+}
+
+.yesno a{
+  display: block;
+  text-decoration: none;
+  font-size: 2.4rem;
+  color: rgb(25, 25, 25);
+  opacity: 100%;
+
+  display: none;
+}
+
+
+
+
+/* hover效果*/
+.yesno:hover{
+  animation: yesno .5s linear forwards;
+  background-color: transparent;
+  padding: 0;
+}
+
+.yesno:hover a{
+  display: block;
+  animation: yesnoa 1s ease infinite;
+
+}
+
+.yesno:hover i{
+  display: none;
+}
+
+@keyframes yesno{
+  0%{
+    transform: scale(1);
+    opacity: 0;
+
+  }
+  100%{
+    transform: scale(1);
+    opacity: 100%;
+  }
+}
+
+@keyframes yesnoa {
+  0%{
+    transform: scale(1);
+    color: rgb(25, 25, 25);
+  }
+  100%{
+    transform: scale(1.2);
+    color: #F6A89E;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

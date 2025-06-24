@@ -1,0 +1,968 @@
+@import url(../reset.css);
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+ /* --------------- 主視覺區 --------------- */
+.main_slogan{
+    position: relative;
+    /* border: 1px solid black; */
+}
+
+.main_slogan::after{ /*偽元素撐開高度用*/
+    content: "";
+    display: block;
+    height: 550px;
+    
+}
+
+.main_image{
+    width: 950px;
+    height: 550px;
+    background-image: url(img/premium_photo-1664910106248-14a406867f03.avif);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 5rem 0 0 5rem;
+}
+
+.slogan{
+    background-color:#FFF8E5;
+    padding: 2rem;
+    border-radius: 0 3rem 3rem 0;
+    position: absolute;
+    top: 20rem;
+}
+
+
+.name_anime{
+    display: flex;
+}
+
+
+.slogan .name_anime h1{
+    color: #BD8E3D;
+    margin-bottom: 0.8rem;
+}
+
+/* 山山兩個字的動畫效果 */
+.name_anime h1:first-child{
+    animation: shan1 1s linear 5 forwards;
+}
+
+.name_anime h1:last-child{
+    animation: shan2 1s linear .5s 5 forwards;
+}
+
+@keyframes shan1 {
+    0%{
+        transform: translateY(0) scaleX(1);
+    }
+    50%{
+        transform: translateY(-1rem) scaleX(1.2) ;
+    }
+    100%{
+        transform: translateY(0rem) scaleX(1);
+    }
+}
+
+@keyframes shan2 {
+    0%{
+        transform: translateY(0) scaleX(1) ;
+    }
+    50%{
+        transform: translateY(-1rem) scaleX(1.2) ;
+    }
+    100%{
+        transform: translateY(0rem) scaleX(1);
+    }
+}
+
+
+.slogan p{
+    font-size: 2.4rem;
+    line-height: 120%;
+
+}
+
+.slogan p:last-child{
+    font-size: 1.8rem;
+    line-height: 160%;
+    margin-top: 2.4rem;
+
+}
+
+
+/* -------------- 理念區塊 -------------- */
+.idea{
+    position: relative;
+    height: 40rem;
+    /* border:  1px solid orange; */
+}
+
+.idea::before{
+    content: "";
+    display: block;
+    width: 120rem;
+    height: 40rem;
+    background-image: url(img/slogan背景.avif);
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 20%;
+
+}
+
+.idea p {
+    /* border: 1px solid red; */
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2.4rem;
+    line-height: 200%;
+    font-weight:500;
+
+    position: absolute;
+    top: 11.8rem;
+    left: 18.7rem;
+
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+/* -------------- 服務項目區塊 -------------- */
+
+.service{
+    width: 120rem;
+    height: 70rem;
+    display: flex;
+    justify-content: center;
+
+    /* border: 2px solid red; */
+    position: relative;
+    overflow: hidden;
+    
+    z-index: 0;
+}
+
+.service ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid blue; */
+
+    
+}
+
+.service ul::before{
+    content: "";
+    display: block;
+    width: 77.7rem;
+    height: 77.7rem;
+
+    background-image: url(img/sun.svg);
+    background-position: center;
+    background-size: contain;
+
+    position: absolute;
+    top: -30rem;
+    left: -30rem;
+    z-index: -1;
+
+    animation: sun 5s linear infinite;
+}
+
+@keyframes sun{
+    0%{
+        transform: scale(1);
+        
+    }
+    50%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.service ul li{
+    /* border: 1px solid green; */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.serviceImg{
+    display: block;
+    width: 30rem;
+    height: 30rem;
+    /* border: 1px solid black; */
+    border-radius: 50%;
+}
+
+.leftside_img{
+    gap:3.2rem
+}
+
+.leftside_img1{
+    background-image: url(img/conseling.avif);
+    background-size:cover;
+    background-position: center;
+
+}
+
+.leftside_img2{
+    background-image: url(img/painting.avif);
+    background-size: cover;
+    background-position: 30% 50%;
+}
+
+.center_img1{
+    background-image: url(img/exercise.avif);
+    background-size: cover;
+    background-position: 20% 50%;
+}
+
+
+
+.yellowbird{
+    display: block;
+    height: 6.5rem;
+    width: 6.5rem;
+    margin-right: 1.2rem;
+}
+
+.rightside_info ol{
+    /* border: 1px solid orange; */
+    margin-left: 7.2rem;
+
+}
+
+.rightside_info ol li{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.rightside_info ol h2{
+    line-height: 6.5rem;
+}
+
+.rightside_info ol p{
+    font-size: 2.4rem;
+    line-height: 120%;
+    margin-top: 2.4rem;
+    margin-bottom: 4.8rem;
+}
+
+.rightside_info ol a{
+    /* border: 1px solid purple; */
+
+    display: block;
+    width: 12rem;
+    height: 10rem;
+    color:#FFF8E5;
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 10rem;  
+    background-image: url(img/首頁more按鈕背景.svg);
+    background-size:contain;   
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+
+    position: relative;
+}
+
+
+
+.rightside_info ol a::after{
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 12rem;
+    background-image: url(img/首頁more按鈕動畫用背景.svg);
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: -8%;
+    left: 8%;
+
+    animation: btna 3s linear infinite;
+}
+
+@keyframes btna {
+    0%{
+        transform: rotate(0deg) ;
+    }
+    50%{
+        transform: rotate(180deg) ;
+    }
+    100%{
+        transform: rotate(360deg) ;
+    }
+}
+
+
+
+
+.rightside_info ol a:hover{
+    animation: ahover 0.5s linear forwards ;
+}
+
+@keyframes ahover {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.rightside_info ol a:hover::after{
+    animation: btn1 5s linear infinite;
+}
+
+
+@keyframes btn1 {
+    0%{
+        transform: rotate(0deg) ;
+    }
+    50%{
+        transform: rotate(-180deg) ;
+    }
+    100%{
+        transform: rotate(-360deg) ;
+    }
+}
+
+
+
+
+/*-------------- 團隊介紹區塊 --------------*/
+.teams{
+    /* background-color: rgb(210, 188, 146); */
+
+    
+}
+
+.teams ul{
+    /* border: 1px solid black; */
+    display: flex;
+    padding: 9.6rem 0;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.teams ul > li{
+    /* border: 1px solid blue; */
+}
+
+/* 左側描述區 */
+.team_left_info{
+    margin-right: 6rem;
+}
+
+.team_left_info ol{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    
+}
+
+.team_left_info ol li{
+    display: flex;
+    align-items: center;
+
+    /* border: 1px dotted green; */
+}
+
+.bluebird{
+    width: 6.5rem;
+    order: 2;
+    margin-left: 12px ;
+}
+
+.team_left_info ol h2{}
+
+.team_left_info ol p{
+    font-size: 2.4rem;
+    line-height: 120%;
+    margin-top: 2.4rem;
+    margin-bottom: 4.8rem;
+}
+
+.team_left_info ol li a{
+    /* border: 1px solid purple; */
+
+    display: block;
+    width: 12rem;
+    height: 10rem;
+    color:#FFF8E5;
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 10rem;  
+    background-image: url(img/首頁more按鈕背景.svg);
+    background-size:contain;   
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+
+    position: relative;
+}
+
+.team_left_info ol li a::after{
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 12rem;
+    background-image: url(img/首頁more按鈕動畫用背景.svg);
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: -10%;
+    left: 8%;
+
+    animation: btna 3s linear infinite;
+    
+}
+
+.team_left_info ol a:hover{
+    animation: ahover 0.5s linear forwards ;
+}
+
+.team_left_info ol li a:hover::after{
+    animation: btn1 5s linear infinite;
+}
+
+
+
+
+
+
+
+/*右側名片卡區*/
+.manberCards{
+    /* border: 1px solid blue; */
+    width: 55rem;
+    height: 30rem ;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #eff8e5; */
+    outline: 3px solid #F0CA3B;
+    background-color: #FFF8E5;
+    margin: 0 0.4rem;
+
+}
+
+.manberCards button{
+
+}
+
+.manberCards ol{
+    /* border: 1px solid orange; */
+    display: flex;
+    align-items: center;
+
+}
+
+.manberCards ol li{}
+
+.manberPhoto{
+    width: 16rem;
+    height: 20rem;
+    background-image: url(img/photo/02.png);
+    background-size: contain;
+    background-position: center;
+    margin-right: 2.4rem;    
+}
+
+
+.manberNameTitle{
+    display: flex;
+    align-items: end;
+    gap: 1.2rem;
+}
+
+.manberNameTitle h2{
+    font-weight:400;
+}
+
+.manberNameTitle h3{
+    color: hsl(38, 51%, 49%);
+}
+
+.manberCards ol li p{
+    font-size: 1.8rem;
+    line-height: 160%;
+    padding-top: 2.4rem;
+    color: #F6A89E;
+    font-weight: 300;
+}
+
+.teams button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*-------------- 環境介紹區塊 --------------*/
+.environmentInfo{
+    padding: 2.4rem 0 12rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem ;
+}
+
+
+/* 環境上方區 */
+.envirnment_up{
+    padding-left: 12rem;
+}
+
+.envirnment_up ul{
+    display: flex;
+    align-items: center;
+    gap: 4.8rem ;
+}
+
+.envirnment_up ul p{
+    font-size: 2.4rem;
+    line-height: 120%;
+    color: #BD8E3D;
+}
+
+.envirnment_up ul li:last-child{
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+/* 環境下方區 */
+.environment_down{} 
+
+.environment_down ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem ;
+}
+
+.environment_down ul li{}
+
+.environment_down li button{
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.environment_down ul li img{
+    display: block;
+    height: 25rem;
+    border-radius: 30px;
+}
+
+
+
+
+/*-------------- 中間雲朵動畫 --------------*/
+.cloudanime{
+    /* border: 1px solid violet; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.cloudanime::after{
+    content: "";
+    display: block;
+    height: 20rem;
+    
+}
+
+
+.smallcloud{
+    height: 15rem;
+
+    position: absolute;
+    left: 25%;
+
+    animation: scloud 5s linear 0.2s infinite ;
+}
+
+.bigcloud{
+    height: 20rem;
+    order: 2;
+
+    position: absolute;
+    right: 25%;
+
+    animation: bcloud 5s linear 0.2s infinite;
+}
+
+
+/* 期望滑下來時雲才開始動,之後用JS調整? */
+@keyframes scloud{
+    0%{
+        left: 25%;
+    }
+    50%{
+        left: 0%;
+    }
+    100%{
+        left: 25%;
+    }
+}
+@keyframes bcloud{
+    0%{
+        right: 25%;
+    }
+    50%{
+        right: 0%;
+    }
+    100%{
+        right: 25%;
+    }
+}
+
+
+
+.cloudanime p{
+    font-size: 2.4rem;
+    color: #BD8E3D;
+    text-align: center;
+}
+
+
+
+
+/*-------------- 最新消息區塊 --------------*/
+.news{
+    padding: 10rem 0 12rem;
+    background-image: linear-gradient(to top, #FFF8E5 , #fff) ;
+}
+
+.news ul{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items:start;
+    gap: 7.2rem;
+
+    
+}
+
+.news ul > li:first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 8.8rem ;
+}
+
+.news ul > li:first-child .news_title{
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content:end;
+}
+
+.news ul > li:first-child > img{
+    width: 30rem;
+
+}
+
+
+/* 文章列表 */
+.articlelist{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem ;    
+}
+
+.articlelist a{
+    padding-bottom: 1.2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.articlelist ol{
+    
+
+    display: flex;
+    gap: 3.6rem;
+}
+
+.articlelist ol li{
+    gap: 0.8rem;
+}
+
+.date{
+    font-size: 2.4rem;
+    line-height: 120%;
+}
+
+.articlelist ol h3{
+    margin-bottom: 0.8rem;
+}
+
+.articlelist ol p{
+    color: #BD8E3D;
+    font-size: 1.6rem;
+    line-height: 160%;
+}
+
+/* 文章連結hover效果 */
+.articlelist a:hover::after{
+    content: "";
+    display: block;
+    width: 100%;
+    border:  0.1px solid #BD8E3D;
+
+    position: absolute;
+    bottom: 0;
+
+    animation:  borderline 1s linear forwards;
+}
+
+@keyframes borderline{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+.articlelist ol:hover h3{
+    color: #F0CA3B;
+    font-weight: 500;
+    /* font-size: 3.6rem; */
+}
+
+.articlelist ol:hover p{
+    color:#F6A89E ;
+}
+
+.articlelist ol:hover li{
+    color: #F0CA3B;
+}
+
+
+/* more按鈕 */
+
+.news .morebtn a{
+    /* border: 1px solid purple; */
+
+    display: block;
+    width: 12rem;
+    height: 10rem;
+    color:#FFF8E5;
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 10rem;  
+    background-image: url(img/首頁more按鈕背景.svg);
+    background-size:contain;   
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;  /*因為設了這個才那麼剛好被推到右邊的!*/
+    margin-top: 1.2rem;
+
+    overflow:visible;
+    position: relative;
+}
+
+.news .morebtn a::after{
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 12rem;
+    background-image: url(img/首頁more按鈕動畫用背景.svg);
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: -5%;
+    left: 8%;
+
+    animation: btna 3s linear infinite;
+
+    
+}
+
+
+
+
+.news .morebtn a:hover{
+    animation: ahover 0.5s linear forwards ;
+}
+
+@keyframes ahover {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+.news .morebtn a:hover::after{
+    animation: btn1 5s linear infinite;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------- 活動照片集錦 --------------*/
+.activityPhotos{
+    /* border: 1px solid red; */
+
+    background-color: #FFF8E5;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 0 0 12rem 0;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.photo_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo_title img{
+    width: 6.5rem;
+}
+
+
+/* 跑馬燈 畫面一開始有呈現的 之後會停在外面*/
+.marquee{
+    width: 129.6rem;
+    padding: 2rem 2rem 2rem 0;
+    /* border: 1px solid blue; */
+    background-color: #fff;
+    display: flex;
+    gap: 2.4rem ;
+    
+
+    animation: marquee 15s linear forwards;
+}
+
+.marqueelist img{
+    display: block;
+    width: 24rem;
+    height: 18rem;
+    border-radius: 2rem;
+    flex-grow: 1;
+}
+
+@keyframes marquee{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+
+
+/* 持續的跑馬燈效果 */
+.marquee2{
+    width: 129.6rem;
+    padding: 2rem 2rem 2rem 0;
+    /* border: 1px solid blue; */
+    background-color: #fff;
+    display: flex;
+    gap: 2.4rem ;
+    
+    position: absolute;
+    top: 8.9rem;
+    left: 1316px;
+
+    animation: marquee2 30s linear infinite;
+}
+
+
+@keyframes marquee2{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+
+/* 為了讓跑馬燈持續 緊跟在marquee2後面 */
+.marquee3{
+    width: 129.6rem;
+    padding: 2rem 2rem 2rem 0;
+    /* border: 1px solid rgb(255, 102, 0); */
+    background-color: #fff;
+    display: flex;
+    gap: 2.4rem ;
+    
+    position: absolute;
+    top: 8.9rem;
+    left: 1316px;
+
+    animation: marquee3 30s linear 15S infinite;
+}
+
+@keyframes marquee3{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+
+
+
+/* hover效果 讓三個跑馬燈都不要動 */
+.marqueelist:hover .marquee{
+      animation-play-state: paused;
+}
+
+.marqueelist:hover .marquee2{
+      animation-play-state: paused;
+}
+
+.marqueelist:hover .marquee3{
+      animation-play-state: paused;
+}

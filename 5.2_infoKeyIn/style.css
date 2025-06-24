@@ -1,0 +1,192 @@
+@import url(../reset.css);
+
+
+/* ---------- 上方橫幅 ----------*/
+.banner{
+    background-image: url(../img/photo/banner/04.jpg);
+    width: 120rem;
+    height: 25rem;
+    background-size:cover;
+    background-position: center;
+    opacity: 80%;
+    margin-bottom: 4.8rem;
+}
+
+
+  /* <!---------- 標題 ----------> */
+.wrapper > h1{
+    font-size: 4.8rem ;
+    display: flex;
+    gap: 1.2rem ;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 0 auto 1.6rem;
+}
+
+.wrapper > h1 img{
+    width: 6.5rem;
+}
+
+ /* <!---------- 時間告示 ---------->  */
+ .wrapper > h2{
+    color: #BD8E3D;
+    text-align: center;
+ }
+
+
+
+/* <!---------- 預約資料填寫 ---------->  */
+.childinfo{
+    margin-top: 7.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 6rem;
+}
+
+.childinfo > h2{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem; ;
+}
+
+
+
+.childinfo ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem ;
+
+    font-size: 2.4rem;
+    line-height: 120%;
+}
+
+.childinfo ul > li{
+    
+}
+
+
+
+
+.info{
+    display: flex;
+    gap: 10rem ;
+}
+
+.info li{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.info li input{
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    width: 30rem;
+    height: 5.2rem;
+    border-radius: 1rem;
+
+    border: 1px solid rgb(204, 204, 204);
+}
+
+#childname{
+    margin-bottom: 1.6rem;
+}
+
+
+
+.childinfo .problem{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.problem ol{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.problem ol li label{
+    font-weight: 200;
+}
+
+/* !---------- 隔線 ----------> */
+.wrapper > img{
+    display: block;
+    margin: 5.2rem auto;
+}
+
+
+/* <!---------- 聯絡人資訊填寫區 ----------> */
+.parentinfo{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 6rem;
+    font-size: 2.4rem;
+    margin-bottom: 7.2rem;
+}
+
+.parentinfo ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.parentinfo > h2{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0.4rem; ;
+}
+
+.pamessage input{
+    padding-left: 2rem; 
+    box-sizing: border-box;
+    font-size: 1.8rem;
+    width: 100%;
+    height: 5.2rem;
+    line-height: 5.2rem;
+    border-radius: 1rem;
+}
+
+#paname, #phone{
+    margin-bottom: 1.2rem;
+}
+
+#message{
+    margin-top: 0.4rem;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+/* <!---------- 確定預約按鈕 ----------> */
+.wrapper .btn{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4.8rem ;
+
+}
+
+.wrapper .btn a{
+    text-decoration: none;
+    color: rgb(25, 25, 25);
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper .btn span{
+    font-size: 2.4rem;
+    line-height: 100%;
+    padding: 2rem 4rem;
+    background-color: #F0CA3B;
+    border-radius: 999px;
+}

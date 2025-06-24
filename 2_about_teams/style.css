@@ -1,0 +1,282 @@
+@import url(../reset.css);
+
+
+/* ---------- 回到上面按鈕 ---------- */
+.wrapper > a{
+    display: flex;
+    width: 6rem;
+    height: 6rem;
+    align-items: center;
+    justify-content: center;
+ 
+    background-image: url(../img/sun.svg);
+    background-size: contain;
+
+
+    position: fixed;
+    bottom: 40%;
+    right: 10%;
+}
+
+.wrapper > a img{
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    transform: scale(0.8);
+
+    position: relative;
+}
+
+
+/* ---------- 隔線 ---------- */
+.wrapper > img{
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/* ---------- 上排小照索引列 ---------- */
+
+.smallcards{
+    padding-top: 3.6rem;
+}
+
+.cardsTitle{
+    /* border: 1px solid black; */
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.cardsTitle img{
+    width: 6.5rem;
+}
+
+.cardsTitle h1{
+    
+}
+
+
+.manberList{
+    display: flex;
+    justify-content: center;
+    gap: 4.8rem;
+
+    margin: 2.4rem 0 3.6rem;
+}
+
+.manberList a{
+    text-decoration: none;
+    color:rgba(25, 25, 25, 1);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.manberList img{
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    object-position: top;
+
+    border-radius: 2rem;
+}
+
+.manberList p{
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 160%;
+}
+
+.manberList a:hover{
+    transform: scale(1.2);
+}
+
+.manberList a:hover p{
+    text-shadow: 0.1px 0.1px 1px rgb(25, 25, 25);
+    line-height: 120%;
+} 
+
+
+
+/* ---------- 個別介紹列 ---------- */
+.detailedIntro{
+    margin-bottom:6rem ;
+
+    overflow: hidden;   /*隱藏動態班表*/
+}
+
+.detailedIntro > ul{
+    display: flex;
+    flex-direction: column;
+    /* gap: 7.2em */
+}
+
+.detailedIntro > ul >li {
+    padding-top: 7.2rem;
+}
+
+.manberBlockTop{
+    background-color: #FFF8E5;
+    margin: 0 5rem ;
+    padding: 1rem 0 1rem 5rem;
+    color: #BD8E3D;
+
+    display: flex;
+    align-items: center;
+    gap: 2.4rem ;    
+}
+
+.manber_01 h2{
+
+}
+
+.manber_01 h3{}
+
+
+/*照片與經歷欄*/
+.introduction{
+    padding-top: 2.4rem;
+    margin: 0 5rem ;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start; /*移掉查看班表被其他兄弟層撐開的高度*/
+    justify-content: center;
+}
+
+.introduction img{
+    width: 32rem;
+    height: 40rem;
+    border-radius: 3rem;
+    object-fit: cover;
+    margin-right: 6rem;
+    object-position: top;
+}
+
+.introduction > li:nth-child(2){
+    width: 45rem;
+}
+
+.introduction span{
+    font-size: 1.8rem;
+    line-height: 160%;
+}
+
+.introduction p{
+    font-size: 1.8rem;
+    line-height: 160%;
+}
+
+.introduction .list{
+    list-style-type: disc;
+    list-style-position: outside;
+}
+
+.introduction .list li{
+    display: list-item;
+    margin-left: 2.4rem;
+}
+
+.introduction .list ~ h4{
+    margin-top: 2.4rem;
+}
+
+.introduction .scheduleBtn{
+    display: block;
+    padding: 1rem 2rem;
+    border: 1px solid #BD8E3D;
+    color:#BD8E3D;
+    font-size: 1.8rem;
+    line-height: 100%;
+    border-radius: 999px;
+    margin-left: 1.2rem;
+}
+
+
+
+
+/*班表*/
+
+.detailedIntro ol li:first-child{
+    position: relative;
+    
+}
+
+.schedule{
+    font-size: 2.4rem;
+    border: .5rem solid #F0CA3B ;
+
+    width: max-content;  /* 讓表格根據內容寬度撐開 */
+
+    position: absolute;
+    right: -65rem;
+    top: 5rem;
+
+    z-index: 2;
+
+}
+
+.schedule tr{
+  
+}
+
+.schedule td{
+    padding: 1rem 2rem;
+    border: .2rem solid #F0CA3B;
+    background-color: #fff;
+}
+
+/* 班表hover效果*/
+.detailedIntro .scheduleBtn:hover ~ .schedule{
+    animation: sche 1s linear 0.5s forwards ;
+}
+
+@keyframes sche {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-65rem);
+    }
+}
+
+.scheduleBtn:hover{
+    color: #FFF8E5;
+    background-color: #BD8E3D;
+}
+
+
+/*班表hover後下面文字模糊效果*/
+.introduction > li:nth-child(2){
+    position: relative;
+}
+
+.detailedIntro ol li:first-child:hover ~ li:nth-child(2)::after{
+    content: "";
+    display: block;
+    width: 105%;
+    height: 105%;
+    /* border: 1px solid red; */
+    background-color: #ffffffaa;
+    backdrop-filter: blur(5px);
+
+    position: absolute;
+    top: -3%;
+    left: -3%;
+
+    animation: hoverbg 1s linear forwards;
+}
+
+@keyframes hoverbg {
+    from{
+        background-color: transparent;
+        backdrop-filter: blur(0px);
+    }
+    to{
+        background-color: #ffffffaa;
+        backdrop-filter: blur(5px);
+    }
+}
