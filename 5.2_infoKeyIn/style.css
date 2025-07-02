@@ -190,3 +190,86 @@
     background-color: #F0CA3B;
     border-radius: 999px;
 }
+
+/*-------------RWD-------------*/
+@media screen and (max-width: 820px){
+.banner{
+    width: 100vw;
+}
+
+.wrapper > h2{
+    font-size: 28px;
+}
+
+.childinfo{
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top:48px;
+}
+
+.parentinfo{
+    flex-direction: column;
+    align-items: center;
+    gap: 24px; 
+    margin-bottom: 48px;
+}
+
+.wrapper > img{
+    width: 90vw;
+    margin: 24px auto;
+}
+
+
+
+
+}
+
+
+@media screen and (max-width: 430px){
+.wrapper > h1 img{
+    width: 4rem;
+}
+
+.wrapper h1 span{
+    font-size: 36px;
+}
+
+.wrapper h2{
+    font-size: 24px;
+}
+
+.wrapper > img{
+    width: 90vw;
+    margin: 24px auto;
+}
+
+.childinfo{
+    margin-top: 24px;
+}
+
+.parentinfo{
+    margin-bottom: 24px;
+}
+
+.childinfo,.parentinfo{
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.info{
+    flex-direction: column;
+    gap:24px;
+}
+
+.problem ol{
+    grid-template-columns: 1fr;
+}
+
+#message{
+    height: 30vh;
+}
+
+
+}

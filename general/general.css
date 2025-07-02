@@ -302,6 +302,7 @@ header{
     width: 100vw;
     padding-right: 1.6rem;
     /* position: relative; */
+    box-sizing: border-box;
     
 }
 
@@ -353,8 +354,22 @@ footer{
     align-items: center;
 }
 
+.copyright{
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .copyright p{
-    width: 100vw;
+    width: 90vw;
+    margin: 0 auto;
+    
+
+}
+
+.mapplace iframe{
+    width: 70vw;
+
 }
 
 header svg{
@@ -375,6 +390,13 @@ header svg{
 .footer_main{
     width: 100vw;
 }
+.center_text ul{
+    gap:12px;
+}
+
+.center_text ul li,.center_text ul li:nth-child(2){
+    gap:4px;
+}
 
 .center_text p, .center_text ul li h5{
     font-size: 12px;
@@ -384,6 +406,7 @@ header svg{
     width: 100vw;
     flex-direction: column;
     align-items: center;
+    gap:12px ;
 }
 
 .copyright p{

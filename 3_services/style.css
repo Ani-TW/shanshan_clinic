@@ -87,3 +87,55 @@
 .section2 , .section4{
     flex-direction: row-reverse;
 }
+
+
+
+/*--------RWD---------*/
+@media screen and (max-width: 820px){
+.banner{
+    width: 100vw;
+    margin-bottom: 24px;
+}
+
+.area{
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.area p{
+    width: 90vw;
+    /* text-align: center; */
+
+}
+
+.therpylist{
+    flex-direction: column;
+    align-items: center;
+}
+
+.therpylist p{
+    width: 80vw;
+    
+}
+
+.line{
+    width: 90vw;
+    margin: 24px auto;
+}
+
+.center_text li p{
+    width: 100%;
+}
+
+.mapplace iframe{
+    width: 80vw;
+}
+
+}
+
+
+@media screen and (max-width: 430px){
+
+
+}
