@@ -198,7 +198,7 @@
 }
 
 .wrapper > h2{
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .childinfo{
@@ -220,6 +220,9 @@
     margin: 24px auto;
 }
 
+.wrapper > h1 img{
+    width: 50px;
+}
 
 
 
@@ -236,7 +239,7 @@
 }
 
 .wrapper h2{
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .wrapper > img{
