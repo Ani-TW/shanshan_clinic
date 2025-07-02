@@ -139,7 +139,16 @@ header ol li:nth-child(2)::before {
     
 }
 
+/*漢堡*/
+header nav{
+    /* display: flex; */
+    /* align-items: center; */
+}
 
+header svg{
+    display: none;
+    margin-left: auto;
+}
 
 
 /** hover 效果**/
@@ -280,4 +289,104 @@ footer >h5{
     width: 100%;
     font-size: 1.6rem;
     line-height: 160%;
+}
+
+
+
+
+
+
+/*--------------RWD-------------*/
+@media screen and (max-width: 820px){
+header{
+    width: 100vw;
+    padding-right: 1.6rem;
+    /* position: relative; */
+    
+}
+
+.wrapper{
+    width: 100vw;
+}
+
+header nav{
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+
+    width: 50vw;
+    height: 100vh;
+
+    background-color: #FFF8E5;
+    
+}
+
+header ul{
+    flex-direction: column;
+}
+
+header ul li{
+    margin-left: auto;
+}
+
+
+header nav ul li ol{
+    top: 0;
+    left: -50px;
+    /* width: 50vw; */
+}
+
+
+
+
+
+
+footer{
+    max-width: 820px;
+}
+
+.footer_main{
+    width: 100vw;
+    flex-direction: column;
+    gap:24px;
+    align-items: center;
+}
+
+.copyright p{
+    width: 100vw;
+}
+
+header svg{
+    display: block;
+    color: rgb(189, 142, 61);
+}
+
+
+}
+
+
+@media screen and (max-width: 430px){
+.mapplace iframe{
+    width: 70vw;
+
+}
+
+.footer_main{
+    width: 100vw;
+}
+
+.center_text p, .center_text ul li h5{
+    font-size: 12px;
+}
+
+.logo_text{
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copyright p{
+    font-size: 12px; 
+}
 }
