@@ -310,13 +310,18 @@ header{
     width: 100vw;
 }
 
+.show{
+    display: block;
+    
+}
+
 header nav{
     display: none;
     position: absolute;
     top: 60px;
     right: 0;
 
-    width: 50vw;
+    width: 50%;
     height: 100vh;
 
     background-color: #FFF8E5;
@@ -325,17 +330,51 @@ header nav{
 
 header ul{
     flex-direction: column;
+    
 }
 
-header ul li{
-    margin-left: auto;
+header ul > li{
+    width: auto;
+    text-align: center;
+    /* border-bottom: 1px dashed #BD8E3D; */
+    margin-bottom: 4px;
 }
+
+header ul > li> a >h3{
+    
+} 
+
+
+header ul > li >a {
+    /* width: 100%; */
+    text-align: left;
+    padding-left: 20px;
+}
+
 
 
 header nav ul li ol{
-    top: 0;
-    left: -50px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+
+    position: unset;
+}
+
+header ol li:nth-child(2)::before{
+    /* display: none; */
+    width: 90%;
+    background-color: #BD8E3D;
+
+}
+
+header ol li{
     /* width: 50vw; */
+    background-color: #ffffff84;
+}
+
+header nav ul li ol li a{
+    margin:auto;
 }
 
 
@@ -382,6 +421,47 @@ header svg{
 
 
 @media screen and (max-width: 430px){
+
+.mapplace iframe{
+    width: 70vw;
+
+}
+
+.footer_main{
+    width: 100vw;
+}
+.center_text ul{
+    gap:12px;
+}
+
+.center_text ul li,.center_text ul li:nth-child(2){
+    gap:4px;
+}
+
+.center_text p, .center_text ul li h5{
+    font-size: 12px;
+}
+
+.logo_text{
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    gap:12px ;
+}
+
+.copyright p{
+    font-size: 12px; 
+}
+}
+
+
+
+
+@media screen and (max-width: 395px){
+nav{
+    /* height: 100vh; */
+}
+
 .mapplace iframe{
     width: 70vw;
 
