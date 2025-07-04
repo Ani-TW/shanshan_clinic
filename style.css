@@ -274,7 +274,7 @@ a{
     font-size: 2.4rem;
     text-align: center;
     line-height: 10rem;  
-    background-image: url(img/首頁more按鈕背景.svg);
+    background-image: url(img/indexmoremore.svg);
     background-size:contain;   
     background-repeat: no-repeat;
     background-position: center;
@@ -290,7 +290,7 @@ a{
     display: block;
     width: 10rem;
     height: 12rem;
-    background-image: url(img/首頁more按鈕動畫用背景.svg);
+    background-image: url(img/indexmoremoreAni.svg);
     background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -350,63 +350,36 @@ a{
 
 
 
-/*-------------- 團隊介紹區塊 --------------*/
+/* -------------- 團隊介紹區塊重寫 -------------- */
 .teams{
-    /* background-color: rgb(210, 188, 146); */
-
-    
-}
-
-.teams ul{
-    /* border: 1px solid black; */
     display: flex;
-    padding: 9.6rem 0;
     justify-content: center;
     align-items: center;
-
-}
-
-.teams ul > li{
-    /* border: 1px solid blue; */
-}
-
-/* 左側描述區 */
-.team_left_info{
-    margin-right: 6rem;
-}
-
-.team_left_info ol{
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    
-}
-
-.team_left_info ol li{
-    display: flex;
-    align-items: center;
-
-    /* border: 1px dotted green; */
+    gap: 6rem;
+    margin: 9.6rem 0;
 }
 
 .bluebird{
-    width: 6.5rem;
-    order: 2;
-    margin-left: 12px ;
+    width: 65px;
 }
 
-.team_left_info ol h2{}
+.team_left_title{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
 
-.team_left_info ol p{
+
+.team_left_info > p{
     font-size: 2.4rem;
     line-height: 120%;
     margin-top: 2.4rem;
     margin-bottom: 4.8rem;
 }
 
-.team_left_info ol li a{
-    /* border: 1px solid purple; */
-
+.team_left_info > a{
     display: block;
     width: 12rem;
     height: 10rem;
@@ -414,7 +387,7 @@ a{
     font-size: 2.4rem;
     text-align: center;
     line-height: 10rem;  
-    background-image: url(img/首頁more按鈕背景.svg);
+    background-image: url(img/indexmoremore.svg);
     background-size:contain;   
     background-repeat: no-repeat;
     background-position: center;
@@ -423,12 +396,12 @@ a{
     position: relative;
 }
 
-.team_left_info ol li a::after{
+.team_left_info > a::after{
     content: "";
     display: block;
     width: 10rem;
     height: 12rem;
-    background-image: url(img/首頁more按鈕動畫用背景.svg);
+    background-image: url(img/indexmoremoreAni.svg);
     background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -438,61 +411,62 @@ a{
     left: 8%;
 
     animation: btna 3s linear infinite;
-    
 }
 
-.team_left_info ol a:hover{
+
+.team_left_info a:hover{
     animation: ahover 0.5s linear forwards ;
 }
 
-.team_left_info ol li a:hover::after{
+.team_left_info a:hover::after{
     animation: btn1 5s linear infinite;
 }
 
 
-
-
-
-
-
-/*右側名片卡區*/
-.manberCards{
-    /* border: 1px solid blue; */
-    width: 55rem;
-    height: 30rem ;
-    border-radius: 5rem;
+/*右側名片*/
+.cards{
     display: flex;
+    align-items: center;
+}
+
+
+.manberCardsTotal{
+    width: 540px;
+    display: flex;
+    overflow: hidden;
+
+    border:3px solid #F0CA3B ;
+    border-radius: 50px;
+}
+
+
+.manberCard{
+    padding: 40px;
+    border-radius: 50px;
+    width: 540px;
+    box-sizing: border-box;
+
+    display: flex;
+    gap: 20px;
     align-items: center;
     justify-content: center;
-    /* background-color: #eff8e5; */
-    outline: 3px solid #F0CA3B;
-    background-color: #FFF8E5;
-    margin: 0 0.4rem;
-
+    
+    background-color:#FFF8E5;
+    flex-shrink: 0;
 }
 
-.manberCards button{
-
-}
-
-.manberCards ol{
-    /* border: 1px solid orange; */
-    display: flex;
-    align-items: center;
-
-}
-
-.manberCards ol li{}
-
-.manberPhoto{
+.manberCard img{
     width: 16rem;
     height: 20rem;
-    background-image: url(img/photo/02.png);
-    background-size: contain;
-    background-position: center;
-    margin-right: 2.4rem;    
+    object-fit: cover;
 }
-
+.manberCard p{
+    font-size: 1.8rem;
+    line-height: 160%;
+    padding-top: 2.4rem;
+    color: #F6A89E;
+    font-weight: 300;
+}
 
 .manberNameTitle{
     display: flex;
@@ -506,14 +480,6 @@ a{
 
 .manberNameTitle h3{
     color: hsl(38, 51%, 49%);
-}
-
-.manberCards ol li p{
-    font-size: 1.8rem;
-    line-height: 160%;
-    padding-top: 2.4rem;
-    color: #F6A89E;
-    font-weight: 300;
 }
 
 .teams button{
@@ -559,27 +525,81 @@ a{
 
 
 /* 環境下方區 */
-.environment_down{} 
-
-.environment_down ul{
+.environment_down{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2.4rem ;
+} 
+
+.environment_down ul{
+    /* border: 1px solid gray; */
+    align-items: center;
+
+    display: flex;
+    width: 948px;
+    gap: 24px;
+    overflow: hidden;
 }
 
-.environment_down ul li{}
+.environment_down ul li{
+    flex-shrink: 0;
 
-.environment_down li button{
+    width: 300px;
+    height: 225px;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: end;
+
+}
+
+.environment_down button{
     cursor: pointer;
     background: none;
     border: none;
 }
 
-.environment_down ul li img{
-    display: block;
-    height: 25rem;
-    border-radius: 30px;
+.en1{
+    background-image: url(./img/photo/envirnment/ChatGPT\ Image\ 2025年7月5日\ 上午01_09_05.png);
+    background-size: cover;
+}
+
+.en2{
+    background-image: url(./img/photo/envirnment/ChatGPT\ Image\ 2025年7月5日\ 上午12_41_03.png);
+    background-size: cover;
+}
+
+.en3{
+    background-image: url(./img/photo/envirnment/toliet.jpg);
+    background-size: cover;
+}
+
+.en4{
+    background-image: url(./img/photo/envirnment/bigroom.jpg);
+    background-size: cover;
+}
+
+.en5{
+    background-image: url(./img/photo/envirnment/ChatGPT\ Image\ 2025年7月5日\ 上午01_13_48.png);
+    background-size: cover;
+}
+
+.en6{
+    background-image: url(./img/photo/envirnment/OT2.jpg);
+    background-size: cover;
+}
+
+
+
+.environment_down ul li h3{
+    background-color: rgba(25, 25, 25, 0.5);
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+
+    border-radius: 0 0 30px 30px;
+    flex-grow: 1;
 }
 
 
@@ -781,7 +801,7 @@ a{
     font-size: 2.4rem;
     text-align: center;
     line-height: 10rem;  
-    background-image: url(img/首頁more按鈕背景.svg);
+    background-image: url(img/indexmoremore.svg);
     background-size:contain;   
     background-repeat: no-repeat;
     background-position: center;
@@ -797,7 +817,7 @@ a{
     display: block;
     width: 10rem;
     height: 12rem;
-    background-image: url(img/首頁more按鈕動畫用背景.svg);
+    background-image: url(img/indexmoremoreAni.svg);
     background-size:contain;
     background-position: center;
     background-repeat: no-repeat;

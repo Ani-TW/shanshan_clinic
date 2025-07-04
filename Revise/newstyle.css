@@ -1,0 +1,242 @@
+@import url(../reset.css);
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+ /* --------------- 主視覺區 --------------- */
+.main_slogan{
+    position: relative;
+    /* border: 1px solid black; */
+}
+
+.main_slogan::after{ /*偽元素撐開高度用*/
+    content: "";
+    display: block;
+    height: 550px;
+    
+}
+
+.main_image{
+    width: 950px;
+    height: 550px;
+    background-image: url(img/premium_photo-1664910106248-14a406867f03.avif);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 5rem 0 0 5rem;
+}
+
+.slogan{
+    background-color:#FFF8E5;
+    padding: 2rem;
+    border-radius: 0 3rem 3rem 0;
+    position: absolute;
+    top: 20rem;
+}
+
+
+.name_anime{
+    display: flex;
+}
+
+
+.slogan .name_anime h1{
+    color: #BD8E3D;
+    margin-bottom: 0.8rem;
+}
+
+/* 山山兩個字的動畫效果 */
+.name_anime h1:first-child{
+    animation: shan1 1s linear 5 forwards;
+}
+
+.name_anime h1:last-child{
+    animation: shan2 1s linear .5s 5 forwards;
+}
+
+@keyframes shan1 {
+    0%{
+        transform: translateY(0) scaleX(1);
+    }
+    50%{
+        transform: translateY(-1rem) scaleX(1.2) ;
+    }
+    100%{
+        transform: translateY(0rem) scaleX(1);
+    }
+}
+
+@keyframes shan2 {
+    0%{
+        transform: translateY(0) scaleX(1) ;
+    }
+    50%{
+        transform: translateY(-1rem) scaleX(1.2) ;
+    }
+    100%{
+        transform: translateY(0rem) scaleX(1);
+    }
+}
+
+
+.slogan p{
+    font-size: 2.4rem;
+    line-height: 120%;
+
+}
+
+.slogan p:last-child{
+    font-size: 1.8rem;
+    line-height: 160%;
+    margin-top: 2.4rem;
+
+}
+
+
+/* -------------- 理念區塊 -------------- */
+
+
+
+/* -------------- 團隊介紹區塊重寫 -------------- */
+.teams{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    margin: 9.6rem 0;
+}
+
+.bluebird{
+    width: 65px;
+}
+
+.team_left_title{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+
+.team_left_info > p{
+    font-size: 2.4rem;
+    line-height: 120%;
+    margin-top: 2.4rem;
+    margin-bottom: 4.8rem;
+}
+
+.team_left_info > a{
+    display: block;
+    width: 12rem;
+    height: 10rem;
+    color:#FFF8E5;
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 10rem;  
+    background-image: url(../img/首頁more按鈕背景.svg);
+    background-size:contain;   
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: auto;
+
+    position: relative;
+}
+
+.team_left_info > a::after{
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 12rem;
+    background-image: url(../img/首頁more按鈕動畫用背景.svg);
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: -10%;
+    left: 8%;
+
+    animation: btna 3s linear infinite;
+}
+
+
+.team_left_info a:hover{
+    animation: ahover 0.5s linear forwards ;
+}
+
+.team_left_info a:hover::after{
+    animation: btn1 5s linear infinite;
+}
+
+
+/*右側名片*/
+.cards{
+    display: flex;
+    align-items: center;
+}
+
+
+.manberCardsTotal{
+    width: 540px;
+    display: flex;
+    overflow: hidden;
+
+    border:3px solid #F0CA3B ;
+    border-radius: 50px;
+}
+
+
+.manberCard{
+    padding: 40px;
+    border-radius: 50px;
+    width: 540px;
+    box-sizing: border-box;
+
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    
+    background-color:#FFF8E5;
+    flex-shrink: 0;
+}
+
+.manberCard img{
+    width: 16rem;
+    height: 20rem;
+    object-fit: cover;
+}
+.manberCard p{
+    font-size: 1.8rem;
+    line-height: 160%;
+    padding-top: 2.4rem;
+    color: #F6A89E;
+    font-weight: 300;
+}
+
+.manberNameTitle{
+    display: flex;
+    align-items: end;
+    gap: 1.2rem;
+}
+
+.manberNameTitle h2{
+    font-weight:400;
+}
+
+.manberNameTitle h3{
+    color: hsl(38, 51%, 49%);
+}
+
+.teams button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
