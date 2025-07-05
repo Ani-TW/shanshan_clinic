@@ -229,7 +229,7 @@
 }
 
 
-@media screen and (max-width: 430px){
+@media screen and (max-width: 431px){
 .wrapper > h1 img{
     width: 4rem;
 }
@@ -240,6 +240,8 @@
 
 .wrapper h2{
     font-size: 28px;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 .wrapper > img{
@@ -249,6 +251,7 @@
 
 .childinfo{
     margin-top: 24px;
+    gap: 0px;
 }
 
 .parentinfo{
@@ -258,7 +261,7 @@
 .childinfo,.parentinfo{
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 0px;
 }
 
 .info{
@@ -275,7 +278,84 @@
 }
 
 
+.wrapper h2{
+    align-self: baseline;
+    padding-left: 50px;
+}
 
+
+.parentinfo h2{
+    flex-direction: row;
+}
+
+
+}
+
+@media screen and (max-width: 391px){
+.wrapper > h1 img{
+    width: 4rem;
+}
+
+.wrapper h1 span{
+    font-size: 36px;
+}
+
+.wrapper h2{
+    font-size: 28px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.wrapper > h2{
+    padding: 0;
+    font-size: 24px;
+}
+
+.wrapper > img{
+    width: 90vw;
+    margin: 24px auto;
+}
+
+.childinfo{
+    margin-top: 24px;
+    gap: 0px;
+}
+
+.parentinfo{
+    margin-bottom: 24px;
+}
+
+.childinfo,.parentinfo{
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+
+.info{
+    flex-direction: column;
+    gap:24px;
+}
+
+.problem ol{
+    grid-template-columns: 1fr;
+}
+
+#message{
+    height: 30vh;
+}
+
+
+.childinfo h2{
+    align-self: baseline;
+    padding-left: 30px;
+}
+
+
+.parentinfo h2{
+    flex-direction: row;
+    padding-left: 30px;
+
+}
 
 
 }

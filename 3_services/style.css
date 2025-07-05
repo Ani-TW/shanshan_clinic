@@ -98,13 +98,13 @@
 }
 
 .area{
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
-    gap: 12px;
+    gap: 24px;
 }
 
 .area p{
-    width: 90vw;
+    width: 60vw;
     /* text-align: center; */
 
 }
@@ -135,7 +135,26 @@
 }
 
 
-@media screen and (max-width: 430px){
+@media screen and (max-width: 431px){
+.area{
+    flex-direction: column;
+}
 
+.area p{
+    width: 85vw;
+}
+
+.title{
+    gap: 0;
+    
+}
+
+.title > li:first-child{
+    gap: 0;
+}
+
+.price{
+    font-size: 18px;
+}
 
 }

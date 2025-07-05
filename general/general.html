@@ -155,8 +155,17 @@
            let nav = document.querySelector('nav')
            burger.addEventListener('click',function(e){
                 nav.classList.toggle('show')
-           }) 
+           })
+           
+            let wrapper = document.querySelector('.wrapper')
+
+            wrapper.addEventListener('click',()=>{
+                nav.classList.remove('show')
+           })
+
         }
+
+
         
         window.addEventListener('load',dofirst)
 
