@@ -50,6 +50,10 @@
    background-image: url(../img/流程圓框2png.png);
 }
 
+.flow > img{
+    display: none;
+}
+
 
 /* -------------隔線-------------*/
 .wrapper > img{
@@ -168,8 +172,12 @@ table{
     height: 100%;
 }
 
-table tr{
-    
+table th{
+    font-size: 2.4rem;
+    line-height: 160%;
+    text-align: center;
+    border: 5px solid #FFF8E5;
+    padding: 1rem 5rem;
 }
 
 table td{
@@ -189,6 +197,11 @@ table .yesno{
     background-color: #FFF;
 }
 
+.date_inner{
+    display: flex;
+    flex-direction: row;
+    gap: 24px  ;
+}
 
 
 
@@ -252,15 +265,346 @@ table .yesno{
 
 
 
+/*--------------RWD---------------*/
+@media screen and (max-width: 820px) {
+
+.flow ol{
+    gap: 4px;
+}
+
+.flow li {
+    width: 20vw;  
+    height: 20vw;
+}
+
+.wrapper > img{
+    width: 90vw;
+}
+
+.hug{
+    width: 25vw;
+}
+
+.first_assess{
+    max-width: 90vw;
+    padding-left: 5vw ;
+}
+
+.appointment{
+    max-width: 85vw;
+    margin: 0 auto 48px;
+}
+
+
+.appointment ul{
+    padding: 0;
+}
+
+.appointment ul li:last-child{
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.appointment ul li:last-child p:last-child {
+    align-self: flex-end;
+    font-size: 18px;
+}
 
 
 
 
 
+table{
+    
+}
+
+table .date{
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+    padding: 12px;
+
+    /* vertical-align: baseline; */
+}
+
+table td{
+    padding: 10px 10px;
+    white-space: normal;
+
+}
+
+table th{
+    padding: 0;
+}
+
+.yesno{
+    width: 20vw;
+    vertical-align: middle;
+}
+
+.time{
+    padding: 10px 10px;
+    font-size: 24px;
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
+}
+
+.yesno-inner{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 12px;
+   height: 100%;
+
+    
+
+}
+
+.yesno i{
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.yesno a{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.date_inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+
+.date_inner p{
+    line-height: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.date_inner span{
+    line-height: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+
+}
+
+
+
+@media screen and (max-width: 435px){
+
+.flow ol{
+    display: none;
+}
+
+.title{
+    font-size: 32px;
+}
+
+.title img{
+    width: 40px;
+}
+
+
+.flow > img{
+    display: block;
+    width: 95vw;
+    margin: 24px auto 0;
+}
+
+.first_assess{
+    flex-direction: column;
+}
+
+.assess_left ul{
+    width: 90vw;
+}
+
+.assess_left ul li{
+    width: 90vw;
+}
+
+.assess_left ul li:last-child{
+    font-size: 18px;
+}
+
+.assess_left{
+    width: 90vw;
+}
+
+.assess_left p{
+    width: 90vw;
+    font-size: 18px;
+    margin-top: 24px;
+}
+
+.hug{
+    display: none;
+}
 
 
 
 
+.yesno{
+    padding: 0;
+}
 
+table .date{
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.time{
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+.date_inner p{
+    font-size: 18px;
+    padding: 0;
+}
+
+table th{
+    padding: 0 10px;
+}
+
+.date_inner{
+    flex-direction: column;
+    /* padding: 12px 0; */
+}
+
+.yesno{
+    
+}
+
+.yesno a{
+    margin: 0;
+    padding: 10px 10px;
+    line-height: 100%;
+}
+
+}
+
+
+@media screen and (max-width: 391px){
+
+.flow ol{
+    display: none;
+}
+
+.title{
+    font-size: 32px;
+}
+
+.title img{
+    width: 40px;
+}
+
+
+.flow > img{
+    display: block;
+    width: 95vw;
+    margin: 24px auto 0;
+}
+
+.first_assess{
+    flex-direction: column;
+}
+
+.assess_left ul{
+    width: 90vw;
+}
+
+.assess_left ul li{
+    width: 90vw;
+}
+
+.assess_left ul li:last-child{
+    font-size: 18px;
+}
+
+.assess_left{
+    width: 90vw;
+}
+
+.assess_left p{
+    width: 90vw;
+    font-size: 18px;
+    margin-top: 24px;
+}
+
+.hug{
+    display: none;
+}
+
+
+.dates{
+    text-align: center;
+}
+
+.appointment ul li:last-child{
+   gap: 8px;
+}
+
+.appointment ul li:last-child p:last-child{
+    font-size: 14px;
+    align-self: center;
+}
+
+.weeks{
+    justify-content:space-between ;
+}
+.weeks button{
+    font-size: 14px;
+    padding: 8px;
+}
+
+.yesno{
+    padding: 0;
+}
+
+table .date{
+    white-space: normal;
+    word-break: break-word;
+    text-align: center;
+    padding: 12px 0;
+}
+
+.time{
+    font-size: 18px;
+    padding: 0 5px;
+}
+
+.date_inner p{
+    font-size: 18px;
+    padding: 0;
+}
+
+table th{
+    padding: 0 10px;
+}
+
+.date_inner{
+    flex-direction: column;
+}
+
+
+.yesno a{
+    margin: 0;
+    padding: 10px 10px;
+    line-height: 100%;
+}
+
+}
 
 

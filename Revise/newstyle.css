@@ -240,3 +240,161 @@ a{
     border: none;
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
+/* <!--日期表格--> */
+table{
+    background-color: #F6A89E;
+    text-align: center;
+    gap: 4px;
+    table-layout: fixed;
+    
+}
+
+
+
+tr > th, td{
+    font-size: 2.4rem;
+    /* background-color: #F0CA3B; */
+}
+
+table td, table th{
+    border: 5px solid #FFF8E5;
+
+}
+
+table td{
+    
+}
+
+table span , table p{
+    font-size: 2.4rem;
+}
+
+.time ,.yesno{
+
+}
+
+table a{
+    font-size: 2.4rem;
+    vertical-align:bottom;
+}
+
+
+
+/*---------------------------*/
+
+.table-container {
+    width: 100%;
+    /* overflow-x: auto; */
+}
+
+.responsive-table {
+    width: 100%;
+    /* border-collapse: collapse; */
+    table-layout: fixed;
+}
+
+.responsive-table th,
+.responsive-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    
+    /* 斷行設定 */
+    /* word-wrap: break-word; */
+    word-break: break-all;
+    /* white-space: normal; */
+    max-width: 0;
+    
+    /* 外觀設定 */
+    vertical-align: end;
+    line-height: 1.4;
+}
+
+/* 手機版優化 */
+@media (max-width: 768px) {
+    .responsive-table td {
+        font-size: 14px;
+        padding: 8px;
+        word-break: break-all;
+    }
+}
+
+
+/*---------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* hover效果*/
+.yesno:hover{
+  animation: yesno .5s linear forwards;
+  background-color: transparent;
+  padding: 0;
+}
+
+.yesno:hover a{
+  display: block;
+  animation: yesnoa 1s ease infinite;
+
+}
+
+.yesno:hover i{
+  display: none;
+}
+
+@keyframes yesno{
+  0%{
+    transform: scale(1);
+    opacity: 0;
+
+  }
+  100%{
+    transform: scale(1);
+    opacity: 100%;
+  }
+}
+
+@keyframes yesnoa {
+  0%{
+    transform: scale(1);
+    color: rgb(25, 25, 25);
+  }
+  100%{
+    transform: scale(1.2);
+    color: #F6A89E;
+  }
+}
