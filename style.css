@@ -986,3 +986,505 @@ a{
 .marqueelist:hover .marquee3{
       animation-play-state: paused;
 }
+
+
+
+
+
+/*----------------RWD----------------*/
+@media screen and ( max-width: 821px) {
+.main_image{
+    height: 60vh;
+}
+.slogan{
+    top: 20%;
+}
+
+.main_slogan::after{
+    height: 60vh;
+}
+
+.idea{
+    height: 40vw;
+}
+
+.idea::before{
+    width: 100vw;
+    height: 40vw;
+}    
+.idea p{
+    width: 85%;
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.service{
+    height: 70vh;
+    width: 100vw;
+}
+
+.serviceImg{
+    width: 20vw;
+    height: 20vw;
+}
+
+.service ul::before{
+    /* animation: none; */
+    width: 500px;
+    height: 500px;
+    top: -40%;
+    left: -10%;
+}
+
+.rightside_info ol p{
+    font-size: 20px;
+}
+
+
+/*-------RWC團隊-----*/
+.manberCardsTotal {
+    width: 45vw;
+    border-radius: 25px;
+}
+.manberCard {
+    width: 45vw;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.manberNameTitle{
+    flex-direction: column;
+    align-items: baseline;
+    gap: 4px;
+}
+
+
+.manberCard img {
+    width: 15rem;
+    height: 15rem;
+    object-fit:cover;
+    object-position: top;
+}
+.manberCard p{
+    padding-top: 4px;
+    font-size: 16px;
+}
+
+.teams{
+    gap: 24px;
+    padding: 0 24px;
+    margin: 48px 0;
+}
+
+.team_left_info > p{
+    font-size: 20px;
+}
+
+.team_left_info > a{
+    margin-left: 0;
+}
+
+
+/*----RWD環境----*/
+.environmentInfo{
+    padding-bottom: 48px;
+}
+
+.envirnment_up ul p{
+    font-size: 20px;
+}
+
+.envirnment_up{
+    padding: 0 ;
+}
+
+.envirnment_up ul {
+    justify-content: center;
+    gap: 12px   
+}
+
+.environment_down ul{
+    width: 624px;
+}
+
+
+.smallcloud {
+    height: 10rem;
+}
+
+.bigcloud{
+    height: 12rem;
+}
+
+
+/*---RWD NEWS----*/
+.news{
+    padding: 48px 0 ;
+}
+.news ul{
+    gap: 24px;
+}
+
+.news ul > li:first-child > img{
+    width: 25vw;
+}
+
+.date{
+    font-size: 20px;
+}
+
+.articlelist{
+    gap: 12px;
+}
+
+.articlelist ol h3{
+    font-size: 20px;
+}
+
+.articlelist ol{
+    gap: 16px;
+    flex-direction:column ;
+}
+
+.news ul > li:first-child {
+    gap: 200px;
+}
+
+.activityPhotos{
+    padding-bottom: 48px;
+}
+
+.article4{
+    display: none;
+}
+
+}
+
+@media screen and ( max-width: 431px){
+.yellowbird , .bluebird{
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+}
+
+.main_image {
+    height: 40vh;
+    background-position-x: 50px;
+    background-position-y: 40%;
+}
+
+.main_slogan::after{
+    height: 40vh;
+}
+
+.slogan{
+    padding: 12px;
+    border-radius: 0 1rem 1rem 0;
+    top: auto;
+    bottom: 5%;
+}
+
+.name_anime h1{
+    font-size: 24px;
+}
+.slogan p{
+    font-size: 14px;
+}
+.slogan p:last-child{
+    margin-top: 8px;
+    font-size: 12px;   
+    
+}
+
+.idea p{
+    font-size: 12px;
+    width: 100vw;
+    box-sizing: border-box;
+}
+
+
+.service {
+    height: 50vh;
+}
+
+.service ul{
+    margin: 0 12px;
+}
+
+.rightside_info ol h2{
+    font-size: 24px;
+}
+
+.rightside_info ol li{
+    align-items: center;
+    justify-content: center;
+}
+
+.rightside_info ol {
+    margin-left: 12px;
+}
+
+.rightside_info ol p{
+    font-size: 16px;
+    margin: 12px 0 12px;
+    padding: 0 12px;
+}
+
+.rightside_info ol a{
+    margin: 0 4px 0 auto;
+}
+
+.service ul::before{
+    width: 300px;
+    height: 300px;
+    animation: none;
+}
+
+.rightside_info ol a,.team_left_info > a,.news .morebtn a{
+    width: 10rem;
+    height: 8rem;
+    font-size: 20px;
+    text-align: center;
+    line-height: 8rem;
+}
+
+.rightside_info ol a::after, .team_left_info > a::after,.news .morebtn a::after{
+    width: 8rem;
+    height: 10rem;
+    animation-duration: 5s;
+}
+
+
+/*---RWD團隊----*/
+.teams{
+    flex-direction: column;
+    gap: 0;
+    margin-top: 24px;
+}
+
+.team_left_info{
+    display: grid;
+    place-items: center;  /*內元素置中*/
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr;
+}
+
+.team_left_title{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    margin-top: 24px;
+}
+.team_left_info > p{
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+.team_left_info > a{
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+
+
+
+.team_left_info > p{
+    margin: 0;
+    font-size: 16px ;
+}
+
+.team_left_info > a{
+    margin-left: auto;
+}
+
+.cards{
+    margin-top: 12px;
+    gap: 12px;
+}
+
+.manberCard{
+    flex-direction: column;
+}
+
+.team_left_title h2{
+    font-size: 24px;
+}
+
+.team_left_title{
+    gap: 0;
+}
+
+.manberCardsTotal{
+    width: 70vw;
+}
+
+.manberCard{
+    width: 70vw;
+}
+
+.manberNameTitle{
+    flex-direction: row;
+    justify-content: center;
+}
+
+.manberName{
+    font-size: 24px;
+}
+.manberJobTitle{
+    font-size: 18px;
+    
+}
+
+
+
+/*----RWD環境----*/
+.envirnment_up ul{
+    flex-direction: column-reverse;
+    padding:24px;
+}
+
+.envirnment_up ul p{
+    width: 75vw;
+    font-size: 16px;
+    text-align: center;
+}
+
+.envirnment_up ul li:last-child h2{
+    font-size: 24px;
+}
+.environmentInfo{
+    gap: 12px;
+    padding-top: 0;
+}
+.environment_down ul{
+    width: 300px;
+}
+
+.cloudanime{
+    display: none;
+}
+
+.environment_down ul{
+    gap:0;
+}
+
+
+/*RWD news*/
+
+.news{
+    padding-top: 0;
+}
+
+.news ul li > img{
+    display: none;
+}
+
+
+.news ul{
+    flex-direction: column;
+    padding: 24px;
+    gap: 12px;
+}
+
+
+.news ul > li:first-child{
+    align-self: center;
+}
+
+.news_title h2{
+    font-size: 24px;
+}
+.articlelist{
+    gap: 16px;
+}
+.date{
+    font-size: 18px;
+}
+
+.articlelist a{
+    padding-bottom: 0;
+}
+
+.articlelist a ol {
+    gap: 4px;
+}
+
+.articlelist ol h3{
+    margin-bottom: 4px;
+    font-size: 18px;
+}
+
+.articlelist ol p{
+    font-size: 14px;
+}
+
+.articlelist .morebtn a{
+    margin-top: 0px;
+}
+
+
+/*----RWD 跑馬燈----*/
+.photo_title img{
+    width: 40px;
+}
+
+.photo_title h2{
+    font-size: 24px;
+}
+
+.activityPhotos{
+    gap: 12px;
+}
+
+.activityPhotos{
+    gap: 0;
+}
+
+.marquee2 , .marquee3{
+    top: 40px;
+}
+
+}
+
+
+@media screen and ( max-width: 391px){
+.activityPhotos{
+    gap: 0;
+}
+
+.environment_down{
+    gap: 12px;
+}
+
+
+
+.teams{
+    margin-top: 24px;
+}
+
+.team_left_info > p{
+    font-size: 14px;
+    grid-column: 2/4 ;
+    grid-row: 2/3;
+}
+
+.team_left_info > a{
+    grid-column: 1/2 ;
+    grid-row: 1/3;
+}
+
+.team_left_title{
+    grid-column: 2/4 ;
+    grid-row: 1/2;
+}
+
+.marquee2 , .marquee3{
+    top: 40px;
+}
+
+
+
+
+
+}
+
+
