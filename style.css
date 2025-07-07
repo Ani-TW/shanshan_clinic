@@ -424,6 +424,14 @@ a{
 
 
 /*右側名片*/
+.cardWindow{
+    width: 540px;
+    overflow: hidden;
+    border: 3px solid #F0CA3B;
+    border-radius: 50px;
+    background-color: #FFF8E5;
+}
+
 .cards{
     display: flex;
     align-items: center;
@@ -433,16 +441,11 @@ a{
 .manberCardsTotal{
     width: 540px;
     display: flex;
-    overflow: hidden;
-
-    border:3px solid #F0CA3B ;
-    border-radius: 50px;
 }
 
 
 .manberCard{
     padding: 40px;
-    border-radius: 50px;
     width: 540px;
     box-sizing: border-box;
 
@@ -451,7 +454,6 @@ a{
     align-items: center;
     justify-content: center;
     
-    background-color:#FFF8E5;
     flex-shrink: 0;
 }
 
@@ -1044,9 +1046,13 @@ a{
 
 
 /*-------RWC團隊-----*/
-.manberCardsTotal {
+.cardWindow{
     width: 45vw;
     border-radius: 25px;
+}
+
+.manberCardsTotal {
+   
 }
 .manberCard {
     width: 45vw;
@@ -1295,10 +1301,15 @@ a{
     margin-left: auto;
 }
 
+
+
 .cards{
     margin-top: 12px;
     gap: 12px;
 }
+
+
+
 
 .manberCard{
     flex-direction: column;
@@ -1312,8 +1323,12 @@ a{
     gap: 0;
 }
 
-.manberCardsTotal{
+.cardWindow{
     width: 70vw;
+}
+
+.manberCardsTotal{
+
 }
 
 .manberCard{
@@ -1366,7 +1381,7 @@ a{
 
 .environment_down ul li{
     width: 70vw;
-    height: 35vh;
+    height: 40vh;
 }
 
 .cloudanime{
