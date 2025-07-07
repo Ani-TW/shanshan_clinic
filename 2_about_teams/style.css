@@ -14,8 +14,9 @@
 
 
     position: fixed;
-    bottom: 40%;
-    right: 10vw;
+
+
+     z-index: 999;
 }
 
 .wrapper > a img{

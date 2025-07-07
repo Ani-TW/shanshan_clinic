@@ -10,10 +10,15 @@
     background-image: url(../img/sun.svg);
     background-size: contain;
 
+    opacity: 0;
 
     position: fixed;
-    bottom: 40%;
-    right: 10vw;
+
+    z-index: 999;
+}
+
+.wrapper .btnShow{
+    opacity: 1;
 }
 
 .wrapper > a img{
