@@ -235,13 +235,20 @@
 }
 
 .wrapper h1 span{
-    font-size: 36px;
+    font-size: 32px;
 }
+
+
 
 .wrapper h2{
     font-size: 28px;
     padding: 0 10px;
     box-sizing: border-box;
+}
+
+.wrapper > h2{
+    padding: 0 12px;
+    font-size: 24px;
 }
 
 .wrapper > img{
@@ -250,7 +257,7 @@
 }
 
 .childinfo{
-    margin-top: 24px;
+    margin-top: 48px;
     gap: 0px;
 }
 
@@ -280,13 +287,18 @@
 
 .wrapper h2{
     align-self: baseline;
-    padding-left: 50px;
 }
 
+
+.childinfo h2{
+    align-self: center;
+}
 
 .parentinfo h2{
     flex-direction: row;
+    align-self: center;
 }
+
 
 
 }
@@ -297,7 +309,7 @@
 }
 
 .wrapper h1 span{
-    font-size: 36px;
+    font-size: 32px;
 }
 
 .wrapper h2{

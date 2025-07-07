@@ -1,4 +1,31 @@
 @import url(../reset.css);
+/* ---------- 回到上面按鈕 ---------- */
+.wrapper > a{
+    display: flex;
+    width: 6rem;
+    height: 6rem;
+    align-items: center;
+    justify-content: center;
+ 
+    background-image: url(../img/sun.svg);
+    background-size: contain;
+
+
+    position: fixed;
+    bottom: 40%;
+    right: 10vw;
+}
+
+.wrapper > a img{
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    transform: scale(0.8);
+
+    position: relative;
+}
+
+
 
 /* ---------- 上方橫幅 ----------*/
 .banner{
@@ -59,21 +86,43 @@
 
 /* select後的效果 暫時用hover代替 */
 .checkbtn label:hover{
-    color: #FFF8E5;
-    background-color: #BD8E3D;
+    color: #BD8E3D;
+    /* background-color: #BD8E3D; */
 }
 
 
 /* <!---------- 文章區 ---------->  */
+ .tagName{
+    /* padding-left: 12px; */
+ }
+
+ .tagName span{
+    font-size: 1.6rem;
+    line-height: 180%;
+    border: 1px solid black;
+    padding: 0 8px;
+    border-radius: 999px;
+ }
+
+.tagName span:first-child{
+    
+}
 
 article p{
     font-size: 1.8rem;
     line-height: 160%;
+    margin-bottom: 24px;
     
+}
+
+article h3{
+    margin: 16px 0 24px;
 }
 
 article h5{
     font-size: 1.6rem;
+    align-self:flex-end;
+    margin-top: 8px;
 }
 
 article a:first-child img{ 
@@ -87,7 +136,6 @@ article a:first-child img{
 }
 
 article a:last-child img{
-
     display: block;
     width: 2rem;
     height: 2rem;
@@ -100,7 +148,7 @@ article ul li{
     max-width: auto;
     display: flex;
     flex-direction: column;
-    gap: 1.6rem;
+    /* gap: 1.6rem; */
     margin-bottom: 2.4rem;
 }
 
@@ -246,4 +294,74 @@ article a:last-child:hover img{
     100%{
         transform: rotate(540deg);
     }
+}
+
+
+
+
+/*------------RWD-----------*/
+@media screen and (max-width : 820px) {
+
+.banner{
+    width: 100vw;
+    margin-bottom: 48px;
+}
+
+article ul li a:last-child img{
+    transform:rotate(180deg);
+}
+
+
+}
+
+
+
+@media screen and (max-width : 431px) {
+.wrapper > h1 img{
+    width: 40px;
+}
+
+.wrapper > h1{
+    font-size: 32px;
+    gap: 4px;
+}
+
+.checkbtn{
+    width: 90vw;
+}
+
+article ul{
+  grid-template-columns: 1fr; 
+}
+
+article h3{
+    font-size: 20px;
+    margin: 12px 0 12px;
+}
+
+article p{
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+article li a:last-child::before{
+    display: none;
+}
+
+article ul li a:last-child{
+    align-self: center;
+    background-color: #F0CA3B;
+    border-radius: 999px;
+    padding: 12px;
+}
+
+
+}
+
+
+@media screen and (max-width : 390px){
+.checkbtn{
+    font-size: 14px;
+    gap: 4px;
+}
 }

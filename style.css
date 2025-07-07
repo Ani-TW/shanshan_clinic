@@ -1215,7 +1215,7 @@ a{
 }
 
 .rightside_info ol h2{
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .rightside_info ol li{
@@ -1305,7 +1305,7 @@ a{
 }
 
 .team_left_title h2{
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .team_left_title{
@@ -1349,7 +1349,7 @@ a{
 }
 
 .envirnment_up ul li:last-child h2{
-    font-size: 24px;
+    font-size: 28px;
 }
 .environmentInfo{
     gap: 12px;
@@ -1401,7 +1401,7 @@ a{
 }
 
 .news_title h2{
-    font-size: 24px;
+    font-size: 28px;
 }
 .articlelist{
     gap: 16px;
@@ -1438,7 +1438,7 @@ a{
 }
 
 .photo_title h2{
-    font-size: 24px;
+    font-size: 28px;
 }
 
 .activityPhotos{
@@ -1451,6 +1451,13 @@ a{
 
 .marquee2 , .marquee3{
     top: 40px;
+}
+
+.photo_title{
+    margin-bottom: 12px;
+}
+.marquee2, .marquee3{
+    top: 52px;
 }
 
 }
