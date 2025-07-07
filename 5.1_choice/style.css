@@ -394,8 +394,18 @@ table th{
     text-align: center;
 }
 
+.yesno:hover{
+    animation: none;
+    background-color: inherit;
+}
+
 .yesno:hover a{
-  animation: none;
+    animation: none;
+    background-color: #fff;
+}
+
+.filled{
+    display: none;
 }
 
 }
@@ -454,7 +464,9 @@ table th{
 }
 
 
-
+.appointment{
+    gap: 0 ;
+}
 
 .yesno{
     padding: 0;
@@ -486,8 +498,19 @@ table th{
     /* padding: 12px 0; */
 }
 
-.yesno{
-    
+.weeks{
+    justify-content:space-between ;
+}
+
+.dates{
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+
+.appointment ul li:last-child p:last-child{
+    font-size: 16px;
+    align-self: center;
 }
 
 .yesno a{
