@@ -534,14 +534,17 @@ a{
     gap: 2.4rem ;
 } 
 
+.environmentWindow{
+    overflow: hidden;
+    width: 948px;
+}
+
 .environment_down ul{
     /* border: 1px solid gray; */
     align-items: center;
 
     display: flex;
-    width: 948px;
     gap: 24px;
-    overflow: hidden;
 }
 
 .environment_down ul li{
@@ -1111,8 +1114,12 @@ a{
     gap: 12px   
 }
 
-.environment_down ul{
+.environmentWindow{
     width: 624px;
+}
+
+.environment_down ul{
+    
 }
 
 
@@ -1371,17 +1378,24 @@ a{
     padding-top: 0;
 }
 
+
+
 .environment_down{
     gap: 12px;
 }
 
-.environment_down ul{
+.environmentWindow{
     width: 70vw;
+}
+
+
+.environment_down ul{
+    
 }
 
 .environment_down ul li{
     width: 70vw;
-    height: 40vh;
+    height: 45vw;
 }
 
 .cloudanime{
