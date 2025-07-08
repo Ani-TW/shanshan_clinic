@@ -141,10 +141,12 @@ a{
 /* -------------- 服務項目區塊 -------------- */
 
 .service{
-    width: 120rem;
-    height: 70rem;
+    /* width: 120rem; */
+    /* height: 70rem; */
     display: flex;
     justify-content: center;
+    padding: 48px;
+    box-sizing: border-box;
 
     /* border: 2px solid red; */
     position: relative;
@@ -357,6 +359,9 @@ a{
     align-items: center;
     gap: 6rem;
     margin: 9.6rem 0;
+
+    padding: 0 24px;
+    box-sizing: border-box;
 }
 
 .bluebird{
@@ -441,6 +446,8 @@ a{
 .manberCardsTotal{
     width: 540px;
     display: flex;
+
+    transition: transform 0.5s ease;
 }
 
 
@@ -478,6 +485,7 @@ a{
 
 .manberNameTitle h2{
     font-weight:400;
+    /* transform: translateX(-30px); */
 }
 
 .manberNameTitle h3{
@@ -488,8 +496,16 @@ a{
     background: none;
     border: none;
     cursor: pointer;
+    width: 30px;
+    height: 30px;
 }
 
+/*JS用來取消button的*/
+.btnHide{
+    color: white;
+    pointer-events: none;
+    
+}
 
 /*-------------- 環境介紹區塊 --------------*/
 .environmentInfo{
@@ -502,13 +518,16 @@ a{
 
 /* 環境上方區 */
 .envirnment_up{
-    padding-left: 12rem;
+    /* padding-left: 12rem; */
 }
 
 .envirnment_up ul{
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 4.8rem ;
+    padding: 0 24px;
+    box-sizing: border-box;
 }
 
 .envirnment_up ul p{
@@ -532,6 +551,8 @@ a{
     justify-content: center;
     align-items: center;
     gap: 2.4rem ;
+    padding: 0 24px;
+    box-sizing: border-box;
 } 
 
 .environmentWindow{
@@ -695,6 +716,9 @@ a{
     justify-content: center;
     align-items:start;
     gap: 7.2rem;
+
+    padding: 0 24px;
+    box-sizing: border-box;
 
     
 }
@@ -998,9 +1022,11 @@ a{
 
 /*----------------RWD----------------*/
 @media screen and ( max-width: 821px) {
-.main_image{
-    height: 60vh;
+.main_image, .main_slogan{
+    height: 40vw;
 }
+
+
 .slogan{
     top: 20%;
 }
@@ -1026,8 +1052,7 @@ a{
 }
 
 .service{
-    height: 70vh;
-    width: 100vw;
+    width: 100%;
 }
 
 .serviceImg{
@@ -1047,8 +1072,15 @@ a{
     font-size: 20px;
 }
 
+.br1{
+    display: none;
+}
 
 /*-------RWC團隊-----*/
+.brHide{
+    display: none;
+}
+
 .cardWindow{
     width: 45vw;
     border-radius: 25px;
@@ -1175,6 +1207,121 @@ a{
 
 }
 
+
+@media screen and ( max-width: 650px){
+.main_slogan,.main_image{
+    height: 280px;
+}
+.idea p{
+    font-size: 16px;
+}
+
+.rightside_info ol{
+    padding: 0 12px;
+    margin-left: 0rem;
+}
+
+
+.teams{
+    flex-direction: column;
+    gap: 0;
+    margin-top: 24px;
+}
+
+.team_left_info{
+    display: grid;
+    place-items: center;  /*內元素置中*/
+     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-rows: 1fr 1fr;
+}
+
+.team_left_title{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    margin-top: 24px;
+}
+.team_left_info > p{
+    grid-column: 1/3;
+    grid-row: 2/3;
+}
+.team_left_info > a{
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+
+
+
+.team_left_info > p{
+    margin: 0;
+}
+
+.team_left_info > a{
+    margin-left: auto;
+}
+
+
+
+.cards{
+    margin-top: 12px;
+    gap: 12px;
+}
+
+
+.team_left_title{
+    gap: 0;
+}
+
+.cardWindow{
+    width: 70vw;
+}
+
+.manberCardsTotal{
+
+}
+
+.manberCard{
+    width: 70vw;
+}
+
+.manberNameTitle{
+    flex-direction: row;
+
+}
+
+.manberName{
+    font-size: 24px;
+}
+.manberJobTitle{
+    font-size: 18px;
+    
+}
+
+
+
+/*環境照RWD*/
+.environment_down{
+    gap: 12px;
+}
+
+.environmentWindow{
+    width: 70vw;
+}
+
+
+.environment_down ul{
+    
+}
+
+.environment_down ul li{
+    width: 70vw;
+    height: 45vw;
+}
+
+
+}
+
+
+
 @media screen and ( max-width: 431px){
 .yellowbird , .bluebird{
     width: 40px;
@@ -1183,7 +1330,6 @@ a{
 }
 
 .main_image {
-    height: 40vh;
     background-position-x: 50px;
     background-position-y: 40%;
 }
@@ -1219,7 +1365,7 @@ a{
 
 
 .service {
-    height: 50vh;
+    padding: 24px;
 }
 
 .service ul{
@@ -1382,6 +1528,7 @@ a{
 
 .environment_down{
     gap: 12px;
+    padding: 0 8px;
 }
 
 .environmentWindow{
@@ -1402,9 +1549,6 @@ a{
     display: none;
 }
 
-.environment_down ul{
-    gap:0;
-}
 
 
 /*RWD news*/

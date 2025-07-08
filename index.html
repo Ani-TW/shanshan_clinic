@@ -150,7 +150,7 @@
                     <img class="bluebird" src="img/icon/bluebird icon.png" alt="bluebird">
                     <h2>山山團隊</h2>
                 </div>
-                <p>治療所的老師，皆為通過國家考試<br>合格的職能治療師與臨床心理師。</p>
+                <p>治療所的老師，皆為通過國家考試<br class="brHide">合格的職能治療師與臨床心理師。</p>
                 <a href="2_about_teams/about_teams.html">more</a>
             </div>
 
@@ -446,7 +446,84 @@
     </footer>
 
 
+<script>
+    
 
+    window.addEventListener('load', function(){
+
+        
+        let manberCards = document.querySelectorAll('.manberCard')
+        const cardCount = manberCards.length //名片的張數
+
+        let rightBtn = document.querySelector('.rightbtn')
+        let leftBtn = document.querySelector('.leftbtn')
+
+        let cardWindow = document.querySelector('.cardWindow')
+        let manberList = document.querySelector('.manberCardsTotal')
+        
+        let current = 1 //名片流動紀錄起始
+
+        //按鈕狀態
+        function updateBtn(){
+            //第一張時右按鈕失效
+            if(current === 1){
+                rightBtn.classList.add('btnHide')
+            }else{
+                rightBtn.classList.remove('btnHide')
+            }
+
+            //第六張時左按鈕失效
+            if(current == cardCount){
+                leftBtn.classList.add('btnHide')
+            }else{
+                leftBtn.classList.remove('btnHide')
+            }
+        }
+
+        //
+        
+        //名片更新
+        function updateCards(){
+            let width = document.querySelector('.manberCard').getBoundingClientRect().width
+            let translateX = - (current -1 ) * width
+            manberList.style.transform = `translateX(${translateX}px)`
+            console.log(width)
+        }
+      
+
+        //初始化
+        updateBtn()
+        updateCards()
+
+        //按鈕監聽
+        leftBtn.addEventListener('click', function(e){
+            if(current < cardCount){
+                current++
+                updateCards()
+                updateBtn()
+            }
+
+            
+        })
+
+        rightBtn.addEventListener('click', function(){
+           if(current > 1 ){
+            current--
+            updateCards()
+            updateBtn()
+           }
+        })
+
+
+        window.addEventListener('resize', function(){
+            updateCards()
+        })
+
+       
+    })
+    
+
+</script>
 
 
    

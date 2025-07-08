@@ -354,28 +354,39 @@ header ul > li >a {
 
 
 header nav ul li ol{
-    width: 100%;
+    width: 90%;
     display: block;
     box-sizing: border-box;
-
+    margin: 0 auto;
     position: unset;
 }
 
 header ol li:nth-child(2)::before{
-    /* display: none; */
-    width: 90%;
-    background-color: #BD8E3D;
+    display: none;
+    /* width: 90%;
+    background-color: #BD8E3D; */
 
 }
 
 header ol li{
     /* width: 50vw; */
     background-color: #ffffff84;
+    border: 1px dotted
+     #BD8E3D;
+    border-top: none;
 }
 
 header nav ul li ol li a{
     margin:auto;
+    align-items: center;
 }
+
+.icon_img{
+    width: 40px;
+    height: 40px;
+    margin-right: 0;
+}
+
 
 
 /*左邊遮罩*/
