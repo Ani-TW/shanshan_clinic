@@ -67,7 +67,6 @@
     margin: 0 auto 6rem;
 
     display: flex;
-    width: 50rem;
     flex-wrap: wrap;
     gap: .8rem;
     justify-content: center;
@@ -312,13 +311,35 @@ article a:last-child:hover img{
     margin-bottom: 48px;
 }
 
+article ul{
+  grid-template-columns: 1fr 1fr; 
+}
+
 article ul li a:last-child img{
     transform:rotate(180deg);
 }
 
+.checkbtn{
+    width: 50%;
+}
 
 }
 
+
+@media screen and (max-width : 700px) {
+article h3{
+    font-size: 20px;
+}
+
+article p{
+    font-size: 16px;
+}
+
+.checkbtn{
+    width: 80%;
+}
+
+}
 
 
 @media screen and (max-width : 431px) {

@@ -240,7 +240,6 @@ footer{
 }
 
 .center_text ul li:nth-child(2){
-    width: 20rem;
     gap: 1.2rem;
 
 }
@@ -436,7 +435,6 @@ footer{
 
 .center_text ul li:nth-child(2){
     gap: 4px;
-    width: 20vw;
 }
 
 
@@ -471,6 +469,48 @@ header svg{
 }
 
 
+
+
+@media screen and (max-width:750px) {
+
+.logo_text{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center_text ul li:nth-child(2){
+    width: auto;
+    flex-shrink: 0;
+}
+
+.logo_Img{
+    align-items: center;
+    flex-direction: row;
+}
+.footer_main{
+    
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer_icon{
+    width: 30px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 431px){
 
 .mapplace iframe{
@@ -493,6 +533,14 @@ header svg{
 
 .center_text p, .center_text ul li h5{
     font-size: 12px;
+}
+
+.logo_Img{
+    flex-direction: column;
+}
+
+.logo_text{
+    flex-direction: row;
 }
 
 .logo_text{

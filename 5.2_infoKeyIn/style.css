@@ -8,7 +8,7 @@
     height: 25rem;
     background-size:cover;
     background-position: center;
-    opacity: 80%;
+    opacity: 80%;F
     margin-bottom: 4.8rem;
 }
 
@@ -21,7 +21,7 @@
     align-items: center;
     justify-content: center;
     
-    margin: 0 auto 1.6rem;
+    margin: 1.6rem auto;
 }
 
 .wrapper > h1 img{
@@ -39,22 +39,20 @@
 /* <!---------- 預約資料填寫 ---------->  */
 .childinfo{
     margin-top: 7.2rem;
-
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    gap: 6rem;
+    width: 80%;
 }
 
 .childinfo > h2{
     display: flex;
     align-items: center;
     gap: 0.4rem; ;
+    margin-bottom: 24px;
 }
 
 
 
 .childinfo ul{
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 2.4rem ;
@@ -63,19 +61,18 @@
     line-height: 120%;
 }
 
-.childinfo ul > li{
-    
-}
+
 
 
 
 
 .info{
     display: flex;
-    gap: 10rem ;
+    gap: 48px;
 }
 
 .info li{
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
@@ -84,7 +81,6 @@
 .info li input{
     padding-left: 2rem;
     font-size: 1.8rem;
-    width: 30rem;
     height: 5.2rem;
     border-radius: 1rem;
 
@@ -95,6 +91,12 @@
     margin-bottom: 1.6rem;
 }
 
+.childinfo, .parentinfo{
+    padding: 0 24px;
+    box-sizing: border-box;
+    margin-left: auto ;
+    margin-right: auto;
+}
 
 
 .childinfo .problem{
@@ -106,7 +108,8 @@
 
 .problem ol{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px   ;
 }
 
 .problem ol li label{
@@ -122,10 +125,7 @@
 
 /* <!---------- 聯絡人資訊填寫區 ----------> */
 .parentinfo{
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    gap: 6rem;
+    width: 80%;
     font-size: 2.4rem;
     margin-bottom: 7.2rem;
 }
@@ -133,14 +133,21 @@
 .parentinfo ul{
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 2.4rem;
 }
 
 .parentinfo > h2{
     display: flex;
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
     align-items: center;
     gap: 0.4rem; ;
+    margin-bottom: 24px;
+}
+
+
+.pamessage{
+    display: flex;
+    flex-direction: column;
 }
 
 .pamessage input{
@@ -158,8 +165,8 @@
 }
 
 #message{
-    margin-top: 0.4rem;
     width: 100%;
+    margin-top: 0.4rem;
     padding: 12px;
     font-size: 16px;
     border-radius: 8px;
@@ -224,10 +231,25 @@
     width: 50px;
 }
 
-
-
 }
 
+@media screen and (max-width: 730px){
+.info{
+    flex-direction: column;
+    gap: 24px;
+}
+
+.problem ol{
+    grid-template-columns:1fr 1fr;
+}
+}
+
+@media screen and (max-width: 550px){
+.problem ol{
+    grid-template-columns:1fr;
+    gap: 8px;
+}
+}
 
 @media screen and (max-width: 431px){
 .wrapper > h1 img{

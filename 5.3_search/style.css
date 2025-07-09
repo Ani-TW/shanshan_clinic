@@ -30,37 +30,48 @@
     line-height: 120%;
     color: #BD8E3D ;
     text-align: center;
-    margin: 2.4rem 0 ;
+    margin: 2.4rem 0 4.8rem;
 }
 
-.wrapper > h2{
-    padding-left: 12rem;
+.content{
+    width: 80%;v
+    padding: 0 24px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+
+.content > h2{
     display: flex;
-    align-items: center;
+    margin-bottom: 24px;
 }
 
-.wrapper label{
+.content label{
     font-size: 2.4rem;
     line-height: 120%;
     margin-right: 1.6rem;
 }
 
-.wrapper input{
-    width: 30rem;
+.content input{
     height: 5.2rem;
     border: 1px solid rgb(204, 204, 204);
     border-radius: 1rem;
-    padding-left: 2rem;
     font-size: 1.8rem;
 }
 
-.info1 , .info2{
-    padding-left: 12rem;
-    margin-top: 2.4rem;
+.info{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /* padding: 0 48px; */
+    gap: 25px;
 }
 
-#name {
-    margin-right: 4.8rem;
+
+.info1 ,.info2 ,.info3{
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -93,31 +104,35 @@
     width: 100vw;
 }
 
-.wrapper > h2{
+.content h2{
     padding: 0;
-    justify-content: center;
     font-size: 28px;
 }
 
-.info1,.info2{
-    padding-left:36px;
 
-}
-
-.wrapper input{
-    width: 25vw;
-}
-
-#name{
-    margin-right: 24px;
-}
-
-.wrapper .btn{
+.content .btn{
     margin-bottom: 48px;
+}
+
+.content > p{
+    margin-bottom: 48px;
+}
+
+}
+
+
+
+@media screen and (max-width: 550px){
+.info{
+    grid-template-columns: 1fr;
+    gap: 12px;
 }
 
 .wrapper > p{
-    margin-bottom: 48px;
+    font-size: 20px;
+    padding: 12px;
+    box-sizing: border-box;
+    margin-bottom: 24px;
 }
 
 }
@@ -133,28 +148,26 @@
     font-size: 32px;
 }
 
-.info1,.info2{
-    display: flex;
-    flex-direction: column;
-    padding-left: 48px;
+.info{
+    grid-template-columns: 1fr;
+    gap: 12px;
 }
+
 
 #name{
     margin-bottom: 24px;
 }
 
-.wrapper input{
-    width: 30rem;
-}
 
 }
 
 @media screen and (max-width: 390px){
 
+
+
 .info{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 
@@ -176,7 +189,7 @@
     padding-left: 0;
 }
 
-.wrapper label{
+.content label{
     margin: 0;
 }
 
@@ -190,8 +203,6 @@
     /* width: 100%; */
 }
 
-.wrapper input{
-    width: 30rem;
-}
+
 
 }
