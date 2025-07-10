@@ -1330,6 +1330,23 @@ a{
 }
 
 
+@media screen and (max-width: 500px) {
+.rightside_info ol h2{
+    font-size: 24px;
+}
+
+.service ul::before{
+    width: 400px;
+    height: 400px;
+}
+    
+}
+
+
+
+
+
+
 
 @media screen and ( max-width: 431px){
   

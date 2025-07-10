@@ -431,7 +431,7 @@
 .introduction{
     gap: 8px;
     grid-template-columns: 1fr;
-    grid-template-rows: 45vw 1fr 30vw;
+    grid-template-rows: 45vw 1fr 40vw;
 }
 
 .introduction > li:last-child{
@@ -509,7 +509,7 @@
 .introduction{
     gap: 8px;
     grid-template-columns: 1fr;
-    grid-template-rows: 50vw 1fr 50vw;
+    grid-template-rows: 50vw 1fr 40vw;
 }
 
 .introduction > li:last-child{

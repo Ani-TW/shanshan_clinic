@@ -163,14 +163,14 @@
                 <div class="cardWindow"> <!--固定長寬 超過的部分overhidden-->
                     <div class="manberCardsTotal">
                         <div class="manberCard">
-                            <img src="img/photo/02.png" alt="田詠馨">
+                            <img src="img/photo/01.jpg" alt="張家銘">
                             <div >
                                 <div class="manberNameTitle">
-                                    <h2 class="manberName">田詠馨</h2>
+                                    <h2 class="manberName">張家銘</h2>
                                     <h3 class="manberJobTitle">臨床心理師</h3>
                                 </div>
                                 <p>
-                                智力、情緒、人格衡鑑<br>注意力、人際互動、情緒行為議題
+                                壓力調適、拒學/懼學、情緒困擾、失眠、憂鬱症、焦慮症
                                 </p> 
                             </div>
                         </div>
@@ -189,17 +189,59 @@
                         </div>
 
                         <div class="manberCard">
-                            <img src="img/photo/02.png" alt="田詠馨">
+                            <img src="img/photo/03.jpg" alt="張維炫">
                             <div >
                                 <div class="manberNameTitle">
-                                    <h2 class="manberName">田詠馨</h2>
-                                    <h3 class="manberJobTitle">臨床心理師</h3>
+                                    <h2 class="manberName">張維炫</h2>
+                                    <h3 class="manberJobTitle">職能治療師</h3>
                                 </div>
                                 <p>
-                                智力、情緒、人格衡鑑<br>注意力、人際互動、情緒行為議題
+                                感覺統合治療、視知覺訓練、精細操作訓練、書寫能力訓練
                                 </p> 
                             </div>
                         </div>
+
+                        <div class="manberCard">
+                            <img src="img/photo/04.jpg" alt="李奇軒">
+                            <div >
+                                <div class="manberNameTitle">
+                                    <h2 class="manberName">李奇軒</h2>
+                                    <h3 class="manberJobTitle">職能治療師</h3>
+                                </div>
+                                <p>
+                                兒童專注力、情緒與人際互動訓練、精細操作訓練、學齡前幼兒篩檢及家長諮詢
+                                </p> 
+                            </div>
+                        </div>
+
+
+                        <div class="manberCard">
+                            <img src="img/photo/05.jpg" alt="邱璇">
+                            <div >
+                                <div class="manberNameTitle">
+                                    <h2 class="manberName">邱璇</h2>
+                                    <h3 class="manberJobTitle">職能治療師</h3>
+                                </div>
+                                <p>
+                                情緒困擾、前庭覺訓練、兒童專注力、人際互動訓練、精細操作訓練
+                                </p> 
+                            </div>
+                        </div>
+
+                        <div class="manberCard">
+                            <img src="img/photo/06.jpg" alt="蔡汀州">
+                            <div >
+                                <div class="manberNameTitle">
+                                    <h2 class="manberName">蔡汀州</h2>
+                                    <h3 class="manberJobTitle">藝術治療師</h3>
+                                </div>
+                                <p>
+                                術治療、青少年輔導、悲傷輔導、特殊教育、心靈探索
+                                </p> 
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
 
@@ -230,7 +272,7 @@
 
             <!--環境下方區-->
             <div class="environment_down">                
-                <button>
+                <button class="eniLeftBtn">
                     <i class="fa-solid fa-chevron-right fa-flip-horizontal fa-2xl"></i>
                 </button>
                 
@@ -265,7 +307,7 @@
                 </div>
                 
                     
-                <button>
+                <button class="eniRightBtn">
                     <i class="fa-solid fa-chevron-right fa-2xl"></i>
                 </button>
                     
@@ -396,7 +438,7 @@
             <!-- 左邊區塊:logo聯絡 -->
             <div class="logo_text">
             
-                <div class="LogoImg"><!-- logo圖案區 -->
+                <div class="logo_Img"><!-- logo圖案區 -->
                     <div class="footer_logo">
                         <img src="img/logo.svg" alt="橫式logo">
                     </div>
@@ -451,7 +493,7 @@
 
     window.addEventListener('load', function(){
 
-        
+        //---------成員名片JS----------
         let manberCards = document.querySelectorAll('.manberCard')
         const cardCount = manberCards.length //名片的張數
 
@@ -461,19 +503,19 @@
         let cardWindow = document.querySelector('.cardWindow')
         let manberList = document.querySelector('.manberCardsTotal')
         
-        let current = 1 //名片流動紀錄起始
+        let cardCurrent = 1 //名片流動紀錄起始
 
         //按鈕狀態
         function updateBtn(){
             //第一張時右按鈕失效
-            if(current === 1){
+            if(cardCurrent === 1){
                 rightBtn.classList.add('btnHide')
             }else{
                 rightBtn.classList.remove('btnHide')
             }
 
             //第六張時左按鈕失效
-            if(current == cardCount){
+            if(cardCurrent == cardCount){
                 leftBtn.classList.add('btnHide')
             }else{
                 leftBtn.classList.remove('btnHide')
@@ -485,9 +527,9 @@
         //名片更新
         function updateCards(){
             let width = document.querySelector('.manberCard').getBoundingClientRect().width
-            let translateX = - (current -1 ) * width
+            let translateX = - (cardCurrent -1 ) * width
             manberList.style.transform = `translateX(${translateX}px)`
-            console.log(width)
+        
         }
       
 
@@ -497,8 +539,8 @@
 
         //按鈕監聽
         leftBtn.addEventListener('click', function(e){
-            if(current < cardCount){
-                current++
+            if(cardCurrent < cardCount){
+                cardCurrent++
                 updateCards()
                 updateBtn()
             }
@@ -507,18 +549,86 @@
         })
 
         rightBtn.addEventListener('click', function(){
-           if(current > 1 ){
-            current--
+           if(cardCurrent > 1 ){
+            cardCurrent--
             updateCards()
             updateBtn()
            }
         })
 
 
-        window.addEventListener('resize', function(){
-            updateCards()
+       
+
+
+
+        //-------------環境介紹JS-----------
+        let eniLeftBtn = document.querySelector('.eniLeftBtn')
+        let eniRightBtn = document.querySelector('.eniRightBtn')
+
+        const eniPhotos = document.querySelectorAll('.environmentWindow ul li') //取li陣列 看有幾張圖
+        
+        
+        let eniUl = document.querySelector('.environmentWindow ul')
+        let gap = window.getComputedStyle(eniUl).gap  //取ul的gap值: 24px 有單位
+        let gapValue = parseInt(gap)
+        
+
+        let photoCurrent = 1 
+        //左右按鈕與否
+        function updateEnBtn (){
+            //右按鈕控制
+            if( photoCurrent === 1){
+                eniRightBtn.classList.add('btnHide')
+            }else{
+                eniRightBtn.classList.remove('btnHide')
+            }
+
+            let windowWidth = window.innerWidth
+            const maxIndex = (windowWidth>820)?eniPhotos.length - 3:eniPhotos.length - 1;  //判斷按鈕可以要扣多少次用三元運算子 不要用再if else
+            //左按鈕控制
+            if( photoCurrent === maxIndex ){
+                eniLeftBtn.classList.add('btnHide')
+            }else{
+                eniLeftBtn.classList.remove('btnHide')
+            }
+        }
+
+        //環境照片左右位置
+        function updatePhoto(){
+            let photoWidth = document.querySelector('.environmentWindow ul li').getBoundingClientRect().width  //取li的寬度
+            let translateX = - (photoWidth + gapValue) * (photoCurrent-1)
+            eniUl.style.transform = `translateX(${translateX}px)`
+        }
+    
+
+
+        //初始化
+        updateEnBtn()
+        updatePhoto()
+
+        //按鈕監聽
+        eniLeftBtn.addEventListener('click', function(){
+           if( photoCurrent < eniPhotos.length ){
+                photoCurrent++
+                updatePhoto()
+                updateEnBtn()
+            }
         })
 
+        eniRightBtn.addEventListener('click', function(){
+            if(photoCurrent > 1){
+                photoCurrent--
+                updatePhoto() 
+                updateEnBtn()
+            }
+        })
+
+
+        //縮放視窗時要重新抓取
+        window.addEventListener('resize', function(){
+            updateCards()
+            updatePhoto()
+        })
        
     })
     
