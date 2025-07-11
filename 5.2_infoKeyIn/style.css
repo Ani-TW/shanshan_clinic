@@ -83,7 +83,6 @@
     font-size: 1.8rem;
     height: 5.2rem;
     border-radius: 1rem;
-
     border: 1px solid rgb(204, 204, 204);
 }
 
@@ -160,6 +159,7 @@
     border-radius: 1rem;
 }
 
+
 #paname, #phone{
     margin-bottom: 1.2rem;
 }
@@ -174,29 +174,26 @@
     box-sizing: border-box;
 }
 
+.info li .error{
+    border: 1px solid red;
+}
+
+
 
 /* <!---------- 確定預約按鈕 ----------> */
-.wrapper .btn{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4.8rem ;
-
-}
-
-.wrapper .btn a{
-    text-decoration: none;
-    color: rgb(25, 25, 25);
-    display: flex;
-    justify-content: center;
-}
-
-.wrapper .btn span{
+#btn{
+    display: block;
     font-size: 2.4rem;
     line-height: 100%;
-    padding: 2rem 4rem;
-    background-color: #F0CA3B;
+    background-color: #f0ca3b;
+    border: transparent;
     border-radius: 999px;
+    padding: 2rem 4rem;
+    font-family: 'Kiwi Maru', 'Kosugi Maru','Noto Sans TC','Arial';
+    margin: 0 auto 48px;
 }
+
+
 
 /*-------------RWD-------------*/
 @media screen and (max-width: 820px){

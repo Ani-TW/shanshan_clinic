@@ -90,7 +90,7 @@
 
 
 
-    <div class="wrapper">
+    <form class="wrapper">
         <!---------- 上方橫幅 ----------> 
         <div class="banner"></div>
 
@@ -133,13 +133,10 @@
                        
                         <li>
                             <label for="childid">身分證字號</label>
-                            <input id="childid" type="text" placeholder="Z123456789">
-                            <input id="childidcheck" type="text" placeholder="請再次輸入孩童身分證">
+                            <input id="childid" class="idNum" type="text" placeholder="Z123456789">
+                            <input id="childidcheck" class="idNum" type="text" placeholder="請再次輸入孩童身分證">
+                            <span id="remind"></span>
                         </li>
-                        <!-- <li>    
-                            <label for="childidcheck">再次身分證字號</label>
-                            
-                        </li>                     -->
                     </ol>
                 </li>
 
@@ -193,7 +190,8 @@
                         </li> 
                    
                     </ol>           
-        
+                    
+                    <span id="remind2" style="color: red; font-size: 18px;">請至少勾選一項</span>
                 </li>
             </ul>
         </section>
@@ -208,30 +206,30 @@
                 <img src="../img/bluebird.svg" alt="青鳥">
                 <span>聯絡人資訊</span>
             </h2>
-
+ 
             <ul>
                 <!--姓名生日-->
                 <li>
-                    <ol class="info">
-                        <li>
+                        <ol class="info">
+                            <li>
+                            
+                                <label for="paname">姓名</label>
+                                <input id="paname" type="text" placeholder="請輸入聯絡人姓名" >
                         
-                            <label for="paname">姓名</label>
-                            <input id="paname" type="text" placeholder="請輸入聯絡人姓名">
-                    
-                            <label for="appellation">稱謂</label>
-                            <input id="appellation" type="text" placeholder="父、母、主要照顧者等等">
-                        
-                        </li>
+                                <label for="appellation">稱謂</label>
+                                <input id="appellation" type="text" placeholder="父、母、主要照顧者等等" >
+                            
+                            </li>
 
-                       
-                        <li>
-                            <label for="phone">聯絡電話</label>
-                            <input id="phone" type="text" placeholder="0912345678">
-                            <label for="mail">電子郵件</label>
-                            <input id="mail" type="text" placeholder="abc123@gmail.com">
-                        </li>
-                       
-                    </ol>
+                        
+                            <li>
+                                <label for="phone">聯絡電話</label>
+                                <input id="phone" type="text" placeholder="0912345678" >
+                                <label for="mail">電子郵件</label>
+                                <input id="mail" type="text" placeholder="abc123@gmail.com" >
+                            </li>
+                        
+                        </ol>
                 </li>
 
                 <li class="pamessage">
@@ -243,11 +241,10 @@
         </section>
 
     <!---------- 確定預約按鈕 ---------->
-        <div class="btn">
-            <a href="">
+        <button id="btn" type="submit" href="">
             <span>確定預約</span>
-            </a>
-        </div>
+        </button>
+
     
 
 
@@ -324,7 +321,7 @@
             <h5 class="copyright"><p>本網站為TibaMe_前端設計工程師班學員專題成果作品，本平台僅供學習、展示之用。</p></h5>
          </footer>
 
-    </div>
+    </form>
 
 
 
@@ -332,27 +329,120 @@
 
 
 <script>
-function dofirst(){
-           let burger = document.querySelector('#burger')
-           let nav = document.querySelector('nav')
-           let mask = document.querySelector('#mask')
-           
-           burger.addEventListener('click',function(e){
-                nav.classList.toggle('show')
-                mask.classList.toggle('mask')
 
-           })
-           
-           //nav左邊的遮罩 避免按到後面的連結
-            mask.addEventListener('click',()=>{
-                nav.classList.remove('show')
-                mask.classList.remove('mask')
-           })
+    window.addEventListener('load', function(){
+        inputCheck()
+        idChecked()
+        checkBoxChecked()
+        submitChecked()
+    });
 
-        }
+    
 
+    function inputCheck (){
+        const inputs = document.querySelectorAll('input')          
+        inputs.forEach( input => {
+            input.classList.remove('error')
+            input.addEventListener('blur', function(){
+                // input.classList.remove('error')
+                if( input.value === ''){
+                    input.classList.add('error')
+                }else{
+                    input.classList.remove('error')
+                }                   
+            })
+        })  
+    }
+
+
+    function idChecked(){
+        const idNums = document.querySelectorAll('.idNum')
+
+        idNums.forEach( idNum => {
+            idNum.addEventListener( 'blur', function(){
+                const childId = document.querySelector('#childid').value
+                const remind = document.querySelector('#remind')
+                const childidcheck =document.querySelector('#childidcheck').value
+                    if( childId != childidcheck){
+                        remind.innerText = `兩次身分證輸入不相同`
+                    remind.style.color = 'red'
+                    }else{
+                        remind.innerText=""
+                    }
+                })
+            })
+    }
         
-        window.addEventListener('load',dofirst)
+    function checkBoxChecked(){
+        const checkBoxes = document.querySelectorAll('input[type="checkbox"]')
+        const remind2 = document.querySelector('#remind2')
+        
+        checkBoxes.forEach( checkBox => {
+            //給每個勾選註冊事件聆聽
+            checkBox.addEventListener('change', function(){
+                //預設一個空字串  等等逐一填入truefalse
+                let checkList = ''
+                //每一次change 就重頭搜索每一個checkbox的勾選狀態 並把回傳直串成字串 
+                checkBoxes.forEach(checkBox => {
+                    checkList += checkBox.checked
+                    // console.log(checkList)
+                })
+                //預設都沒有選
+                let checked = false
+                if( checkList.includes('true')){
+                    checked = true
+                    remind2.innerText = ``
+                }
+
+                if(checked === false){
+                    remind2.innerText = `請至少勾選一項`
+                    remind2.style.color = 'red'
+                }
+
+            })
+        })
+    }
+    
+    
+
+
+
+
+    function submitChecked(){
+        const btn = document.querySelector('#btn')
+        btn.addEventListener('click' , function(e){
+            // e.preventDefault();
+            
+            //確認text欄都有填入資料  
+            const textes = document.querySelectorAll('input[type="text"]')
+            //預設都有填
+            let innerChecked = true
+            textes.forEach( text => {
+                if( text.value ===''){
+                    innerChecked = false
+                }
+            }) 
+
+            //確認checkbox有沒有勾
+            const checkBoxes = document.querySelectorAll('input[type="checkbox"]')
+            //預設都沒勾
+            let checked = false
+            checkBoxes.forEach( checkBox =>{
+                if( checkBox.checked){
+                    checked = true
+                }
+            })
+
+            if(checked == false || innerChecked == false){
+                alert(`請檢查所有欄位`) 
+            }
+
+
+             
+        })
+    }
+
+    
 
 </script>
 
