@@ -107,25 +107,25 @@
 
         <!---------- 選擇鈕 ----------> 
         <div class="checkbtn">
-            <input id="01" type="checkbox">
+            <input id="01" type="checkbox" data-item="亞斯">
             <label for="01">亞斯伯格症</label>
 
-            <input id="02" type="checkbox">
+            <input id="02" type="checkbox" data-item="手足">
             <label for="02">手足感情</label>
 
-            <input id="03" type="checkbox">
+            <input id="03" type="checkbox" data-item="親職">
             <label for="03">親職互動</label>
 
-            <input id="04" type="checkbox">
+            <input id="04" type="checkbox" data-item="過動">
             <label for="04">過動症</label>
 
-            <input id="05" type="checkbox">
+            <input id="05" type="checkbox" data-item="兒童">
             <label for="05">兒童情緒</label>
 
-            <input id="06" type="checkbox">
+            <input id="06" type="checkbox" data-item="人際">
             <label for="06">人際互動</label>
 
-            <input id="07" type="checkbox">
+            <input id="07" type="checkbox" data-item="感統">
             <label for="07">感覺統合</label>
 
         </div>
@@ -133,7 +133,7 @@
         <!---------- 文章區 ----------> 
         <article>
             <ul>
-                <li>
+                <li class="essay">
                     <a href="">
                         <img src="../img/photo/article/01.jpg" alt="海報">
                     </a>
@@ -149,7 +149,7 @@
                         <img src="../img/icon/左滑.png" alt="">
                     </a>
                 </li>
-                <li>
+                <li class="essay">
                     <a href="">
                     <img src="../img/photo/article/02.jpg" alt="海報"></a>
 
@@ -165,7 +165,7 @@
                         <img src="../img/icon/左滑.png" alt="">
                     </a>
                 </li>
-                <li>
+                <li class="essay">
                     <a href="">
                     <img src="../img/photo/article/03.jpg" alt="海報"></a>
                 
@@ -181,7 +181,7 @@
                 </a>
                 </li>
 
-                <li>
+                <li class="essay">
                     <a href="">
                     <img src="../img/photo/article/01.jpg" alt="海報"></a>
                 
@@ -196,7 +196,7 @@
                         <img src="../img/icon/左滑.png" alt="">
                     </a>
                 </li>
-                <li>
+                <li class="essay">
                     <a href="">
                     <img src="../img/photo/article/02.jpg" alt="海報"></a>
 
@@ -211,7 +211,7 @@
                         <img src="../img/icon/左滑.png" alt="">
                     </a>
                 </li>
-                <li>
+                <li class="essay">
                     <a href="">
                     <img src="../img/photo/article/03.jpg" alt="海報"></a>
                 
@@ -227,7 +227,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li class="essay">
                     <a href="">
                     <img src="../img/photo/article/01.jpg" alt="海報"></a>
                 
@@ -235,6 +235,7 @@
                     <div class="tagName">
                         <span>親職</span>
                         <span>情緒</span>
+                        <span>感統</span>
                     </div>
                     <h3>『絕對不能輸的孩子』：提升挫折忍受度的4項祕訣</h3>
                     <p>我們可以如何協助『不能輸的孩子』呢？提升挫折忍受度的4項祕訣</p>
@@ -242,7 +243,7 @@
                         <img src="../img/icon/左滑.png" alt="">
                     </a>
                 </li>
-                <li>
+                <li class="essay">
                     <a href="">
                     <img src="../img/photo/article/02.jpg" alt="海報"></a>
 
@@ -257,16 +258,13 @@
                         <img src="../img/icon/左滑.png" alt="">
                     </a>
                 </li>
-
-                
-                <!--故意註解 留一個空白
-                <li>
+                <li class="essay">
                     <a href="">
                     <img src="../img/photo/article/03.jpg" alt="海報"></a>
                 
                     <h5>2025-05-16</h5>
                     <div class="tagName">
-                        <span>親職</span>
+                        <span>兒童</span>
                         <span>情緒</span>
                     </div>
                     <h3>處理孩子的說謊行為</h3>
@@ -274,7 +272,7 @@
                     <a href="">閱讀全文
                     <img src="../img/icon/左滑.png" alt="">
                     </a>
-                </li> -->
+                </li>
 
             </ul>
         </article>
@@ -349,13 +347,13 @@
 
     <script> 
 
-    //取消返回上面按鈕的網頁歷史紀錄 + 平滑滾動
+    //------------取消返回上面按鈕的網頁歷史紀錄 + 平滑滾動--------------------
     document.querySelector('a[href="#backtotop"]').addEventListener('click' , function(e){
         e.preventDefault()  //阻止a連結跳轉
         document.querySelector('#backtotop').scrollIntoView({behavior: 'smooth'}) //平滑滾動過去
     })
 
-    //返回上面的按鈕位置和顯示
+    //------------返回上面的按鈕位置和顯示------------------------------------
     window.addEventListener('scroll',function(){
         let winHeight = window.innerHeight
         let scrollTop = document.documentElement.scrollTop  //滾動出去的高度
@@ -380,6 +378,122 @@
             document.querySelector('#topBtn').classList.remove('btnShow')
         }
     })
+
+
+
+    //-----------------文章選取-----------------------------
+   
+        window.addEventListener('load',function(){
+            //1. 呼叫 動態生成li的data-item
+            articleDataItem()
+            //2. 呼叫 監聽所有input checkbox 
+            inputCheckBoxListener()
+
+        })
+
+
+
+        //動態生成每個essay的data-item
+        function articleDataItem(){
+            const essays = document.querySelectorAll('.essay') //包含所有essay的陣列
+            
+            essays.forEach( function(essay){     
+                //取出個別essay的span
+                let essayTag = ''
+                //取得包含所有span的陣列 
+                const spanAll = essay.querySelectorAll('span') 
+                //把每個span的文字串接
+                spanAll.forEach( span => {    
+                    essayTag =  essayTag + ' ' +span.innerText 
+                })
+                //串接好的文字塞到essay標籤的data-item
+                essay.setAttribute('data-item', essayTag)  
+            } )
+        }
+
+
+
+        //input勾勾監聽設置
+        function inputCheckBoxListener(){
+            //取得包含所有input的陣列
+            const checkBoxAll = document.querySelectorAll('input[type="checkbox"]')
+            //逐一給每個input註冊事件聆聽功能
+            checkBoxAll.forEach(checkBox =>{
+                checkBox.addEventListener('change' , choiceArticle )  //checkbox有改變就呼叫文章篩選
+            })
+
+        }
+
+
+
+        //篩選文章函式
+        function choiceArticle(){        //確認選擇的input 和文章dataitem有沒有配對
+            //取得包含所有input的陣列 及 所有class='essay'的陣列
+            const checkBoxAll = document.querySelectorAll('input[type="checkbox"]')
+            const essays = document.querySelectorAll('.essay') 
+
+            let choiceTag = []
+            //逐一取個input(checkbox) 有被選取時, 將它的data-item寫入choiceTag陣列中
+            checkBoxAll.forEach( checkBox => {
+                if( checkBox.checked){
+                    const tag = checkBox.getAttribute('data-item')
+                    choiceTag.push(tag)
+                }
+            })
+
+            //如果choiceTag陣列沒東西 就是使用者沒點 就要顯示全部的文章
+            if(choiceTag.length === 0){
+                essays.forEach(essay => {
+                    essay.style.display = 'block'
+                })
+                return   //這個return用途是: 既然沒點就直接結束 不用往下跑~
+            }
+
+            //當choiceTag長度>0時進入這個迴圈  
+            essays.forEach(essay => {
+                //提取每個文章連結的data-item
+                let essayTag = essay.getAttribute('data-item')
+
+                //和choiceTag的值配對 只要有一個索引有配對到就顯示並結束
+                for( const cTag of choiceTag  ){
+                    if( essayTag.includes(cTag)){
+                        essay.style.display = 'block'
+                        break
+                    }else{
+                        essay.style.display = 'none'
+                    }
+                }    
+
+            })
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+    
+
+
+
+
+
+
+
 
 
 

@@ -400,7 +400,7 @@
 @media screen and (max-width:580px){
 .manberList{
     gap: 8px;; 
-    width: 90vw;
+    width: 90%;
     flex-wrap: wrap;
 
     margin: 4px auto 36px;
@@ -475,9 +475,7 @@
 
 .manberList{
     gap: 8px;; 
-    width: 90vw;
-    flex-wrap: wrap;
-
+    width: 92%;
     margin: 4px auto 36px;
 }
 
