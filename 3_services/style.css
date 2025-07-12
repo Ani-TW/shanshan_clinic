@@ -1,11 +1,11 @@
 @import url(../reset.css);
 
 .banner{
-    background-image: url(../img/photo/banner/03.avif);
+    background-image: url(../img/photo/banner/new/kid-painting-plant-pot-diy-hobby.jpg);
     width: 120rem;
     height: 25rem;
     background-size:cover;
-    background-position: center;
+    background-position: center 75%;
     opacity: 80%;
     margin-bottom: 7.2rem;
 }
