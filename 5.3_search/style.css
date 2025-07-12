@@ -75,26 +75,22 @@
 }
 
 
+.info .error{
+    border: 1px solid red;
+}
+
+
 /* <!------------送出查詢------------> */
-.wrapper .btn{
-    display: flex;
-    justify-content: center;
-    margin: 4.8rem 0 12rem;
-}
-
-.wrapper .btn a{
-    text-decoration: none;
-    color: rgb(25, 25, 25);
-    display: flex;
-    justify-content: center;
-}
-
-.wrapper a span{
+#btn{
+    display: block;
     font-size: 2.4rem;
     line-height: 100%;
-    padding: 2rem 4rem ;
-    background-color: #F0CA3B;
+    background-color: #f0ca3b;
+    border: transparent;
     border-radius: 999px;
+    padding: 2rem 4rem;
+    font-family: 'Kiwi Maru', 'Kosugi Maru','Noto Sans TC','Arial';
+    margin: 48px auto ;
 }
 
 

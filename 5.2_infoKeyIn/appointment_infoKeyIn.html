@@ -136,6 +136,7 @@
                             <input id="childid" class="idNum" type="text" placeholder="Z123456789">
                             <input id="childidcheck" class="idNum" type="text" placeholder="請再次輸入孩童身分證">
                             <span id="remind"></span>
+                            <span id="remind1"></span>
                         </li>
                     </ol>
                 </li>
@@ -191,7 +192,7 @@
                    
                     </ol>           
                     
-                    <span id="remind2" style="color: red; font-size: 18px;">請至少勾選一項</span>
+                    <span id="remind3" style="color: red; font-size: 18px;">請至少勾選一項</span>
                 </li>
             </ul>
         </section>
@@ -246,19 +247,6 @@
         </button>
 
     
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -361,21 +349,51 @@
         idNums.forEach( idNum => {
             idNum.addEventListener( 'blur', function(){
                 const childId = document.querySelector('#childid').value
-                const remind = document.querySelector('#remind')
+                const remind1 = document.querySelector('#remind1')
                 const childidcheck =document.querySelector('#childidcheck').value
                     if( childId != childidcheck){
-                        remind.innerText = `兩次身分證輸入不相同`
-                    remind.style.color = 'red'
+                        remind1.innerText = `兩次身分證輸入不相同`
+                        remind1.style.color = 'red'
+                        remind1.style.fontSize = '18px'
+                        document.querySelector('#childid').classList.add('error')
+                        document.querySelector('#childidcheck').classList.add('error')
                     }else{
-                        remind.innerText=""
+                        remind1.innerText=""
+                        document.querySelector('#childid').classList.remove('error')
+                        document.querySelector('#childidcheck').classList.remove('error')
                     }
+
+                idCorrect()         
+
                 })
             })
     }
+
+
+    function idCorrect(){
+        //檢查身分證格式 查正規表示法
+            const childId = document.querySelector('#childid').value
+            const childidcheck =document.querySelector('#childidcheck').value
+            const remind = document.querySelector('#remind')
+            
+            const regex = /^[A-Z][12][0-9]{8}$/
+            let remindText = ''
+            if( !regex.test(childId) ){
+                remind.innerText = `身分證格式不正確`
+                remind.style.color = 'red'
+                remind.style.fontSize = '18px'
+                // document.querySelector('#childid').style.border = `1px solid red`
+                // document.querySelector('#childidcheck').style.border = `1px solid red`
+            }else{
+                remind.innerText = ''
+            }
+    }
+
+
         
     function checkBoxChecked(){
         const checkBoxes = document.querySelectorAll('input[type="checkbox"]')
-        const remind2 = document.querySelector('#remind2')
+        const remind3 = document.querySelector('#remind3')
         
         checkBoxes.forEach( checkBox => {
             //給每個勾選註冊事件聆聽
@@ -391,12 +409,12 @@
                 let checked = false
                 if( checkList.includes('true')){
                     checked = true
-                    remind2.innerText = ``
+                    remind3.innerText = ``
                 }
 
                 if(checked === false){
-                    remind2.innerText = `請至少勾選一項`
-                    remind2.style.color = 'red'
+                    remind3.innerText = `請至少勾選一項`
+                    remind3.style.color = 'red'
                 }
 
             })
@@ -411,33 +429,55 @@
     function submitChecked(){
         const btn = document.querySelector('#btn')
         btn.addEventListener('click' , function(e){
-            // e.preventDefault();
             
-            //確認text欄都有填入資料  
-            const textes = document.querySelectorAll('input[type="text"]')
-            //預設都有填
-            let innerChecked = true
-            textes.forEach( text => {
-                if( text.value ===''){
-                    innerChecked = false
-                }
-            }) 
+            //提醒身分證要一樣
+            const childId = document.querySelector('#childid').value
+            const childidcheck =document.querySelector('#childidcheck').value
+            if( childId != childidcheck ){
+                e.preventDefault(); //預防跳轉
+                alert(`請確認孩童身分證資訊`)
+            }else if( childId === childidcheck){   //身分證訊息正確才往下走
+                
+                //確認text欄都有填入資料  
+                const textes = document.querySelectorAll('input[type="text"]')
+                //預設都有填
+                let innerChecked = true
+                textes.forEach( text => {
+                    if( text.value ===''){
+                        innerChecked = false
+                    }
+                }) 
 
-            //確認checkbox有沒有勾
-            const checkBoxes = document.querySelectorAll('input[type="checkbox"]')
-            //預設都沒勾
-            let checked = false
-            checkBoxes.forEach( checkBox =>{
-                if( checkBox.checked){
-                    checked = true
-                }
-            })
 
-            if(checked == false || innerChecked == false){
-                alert(`請檢查所有欄位`) 
+                //確認checkbox有沒有勾
+                const checkBoxes = document.querySelectorAll('input[type="checkbox"]')
+                //預設都沒勾
+                let checked = false
+                checkBoxes.forEach( checkBox =>{
+                    if( checkBox.checked){
+                        checked = true
+                    }
+                })
+
+                if(checked == false || innerChecked == false){
+                    alert(`請檢查所有欄位`) 
+                    e.preventDefault(); //預防跳轉
+                }else{
+                    alert(`預約成功`) 
+                }
+
+                //將沒輸入的欄位框紅
+                const inputs = document.querySelectorAll('input')          
+                inputs.forEach( input => {
+                    // input.classList.remove('error')
+                    if( input.value === ''){
+                        input.classList.add('error')
+                    }else{
+                        input.classList.remove('error')
+                    }                   
+                    
+                })
             }
-
-
              
         })
     }
