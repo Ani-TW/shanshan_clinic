@@ -264,6 +264,17 @@ table .yesno{
 
 
 
+/*左邊遮罩*/
+.mask{
+    width: 50vw;
+    height: 100vh;
+    background-color: #ffffffa4;
+
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
+
 
 /*--------------RWD---------------*/
 @media screen and (max-width: 820px) {
