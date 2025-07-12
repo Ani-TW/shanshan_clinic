@@ -482,8 +482,14 @@ html {
 
 
 @media screen and (max-width:430px){
+
 .smallcards{
     padding-top: 24px;
+}
+
+.manberBlockTop{
+    justify-content: center;
+    padding: 10px 0;
 }
 
 .cardsTitle img{
