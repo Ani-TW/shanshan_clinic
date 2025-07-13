@@ -122,8 +122,8 @@ function envirPhotoChange(){
      }
 
      //初始化
-     // updateEnBtn()
-     // updatePhoto()
+     updateEnBtn()
+     updatePhoto()
 
      //按鈕監聽
      eniLeftBtn.addEventListener('click', function(){

@@ -320,9 +320,9 @@ header nav{
     top: 60px;
     right: 0;
 
-    width: 50%;
+    /* width: 50%; */
     height: 100vh;
-
+    z-index: 5;
     background-color: #FFF8E5;
     
 }
@@ -339,8 +339,9 @@ header ul > li{
     margin-bottom: 4px;
 }
 
-header ul > li> a >h3{
-    
+header ul  li  a h3{
+    font-size: 18px;
+    line-height: 200%;
 } 
 
 
@@ -378,25 +379,32 @@ header ol li{
 header nav ul li ol li a{
     margin:auto;
     align-items: center;
+    width: 100%;
+}
+
+header nav ul li ol li a h3{
+    font-size: 16px;
 }
 
 .icon_img{
-    width: 40px;
+    display: none;
+    /* width: 40px;
     height: 40px;
-    margin-right: 0;
+    margin-right: 0; */
 }
 
 
 
 /*漢堡左邊遮罩*/
 .mask{
-    width: 50vw;
+    width: 100vw;
     height: 100vh;
     background-color: #ffffffa4;
 
     position: absolute;
     top: 60px;
     left: 0;
+    z-index: 0;
 }
 
 

@@ -78,6 +78,13 @@
     gap: 0.4rem;
 }
 
+#childbirth{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
 .info li input{
     padding-left: 2rem;
     font-size: 1.8rem;
@@ -89,6 +96,8 @@
 #childname{
     margin-bottom: 1.6rem;
 }
+
+
 
 .childinfo, .parentinfo{
     padding: 0 24px;

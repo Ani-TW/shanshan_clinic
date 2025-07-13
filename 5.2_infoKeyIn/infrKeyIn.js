@@ -46,6 +46,11 @@ function idChecked(){
                const childId = document.querySelector('#childid').value
                const remind1 = document.querySelector('#remind1')
                const childidcheck =document.querySelector('#childidcheck').value
+               if( idNum.value ==='' ){
+                    input.classList.add('error')
+               }
+
+
                if( childId != childidcheck){
                     remind1.innerText = `兩次身分證輸入不相同`
                     remind1.style.color = 'red'
