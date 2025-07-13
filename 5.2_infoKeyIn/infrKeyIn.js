@@ -42,14 +42,17 @@ function idChecked(){
      const idNums = document.querySelectorAll('.idNum')
 
      idNums.forEach( idNum => {
-          idNum.addEventListener( 'blur', function(){
+          idNum.addEventListener( 'blur', function(e){
+               if( idNum.value ==='' ){
+                    input.classList.add('error')   //他有作用  可是這邊的input明明沒定義阿 但為什麼卻可以生效???  改用idNum就無法成功add 'error' 百思不得其解 
+                    console.log(`4545`) //debug用 確定有進入這個函數
+               }
+
+
                const childId = document.querySelector('#childid').value
                const remind1 = document.querySelector('#remind1')
                const childidcheck =document.querySelector('#childidcheck').value
-               if( idNum.value ==='' ){
-                    input.classList.add('error')
-               }
-
+               
 
                if( childId != childidcheck){
                     remind1.innerText = `兩次身分證輸入不相同`
@@ -79,13 +82,15 @@ function idCorrect(){
      const regex = /^[A-Z][12][0-9]{8}$/
      let remindText = ''
      if( !regex.test(childId) ){
-          remind.innerText = `身分證格式不正確`
+          remind.innerText = `身分證格式不正確，請確認字數或英文大寫`
           remind.style.color = 'red'
           remind.style.fontSize = '18px'
+          return false //回傳false
           // document.querySelector('#childid').style.border = `1px solid red`
           // document.querySelector('#childidcheck').style.border = `1px solid red`
      }else{
           remind.innerText = ''
+          return true
      }
 }
 
@@ -129,57 +134,66 @@ function submitChecked(){
      const btn = document.querySelector('#btn')
      btn.addEventListener('click' , function(e){
           
-          //提醒身分證要一樣
-          const childId = document.querySelector('#childid').value
-          const childidcheck =document.querySelector('#childidcheck').value
-          if( childId != childidcheck ){
-               e.preventDefault(); //預防跳轉
-               alert(`請確認孩童身分證資訊`)
-          }else if( childId === childidcheck){   //身分證訊息正確才往下走
-               
-               //確認text欄都有填入資料  
-               const textes = document.querySelectorAll('input[type="text"]')
-               //預設都有填
-               let innerChecked = true
-               textes.forEach( text => {
-               if( text.value ===''){
+          //檢查每一欄有沒有填
+          const textes = document.querySelectorAll('input[type="text"]')
+          let innerChecked = true  //預設每一欄沒填
+          textes.forEach( text => {
+               if( text.value === '' ){
                     innerChecked = false
                }
-               }) 
+          })
 
-
-               //確認checkbox有沒有勾
-               const checkBoxes = document.querySelectorAll('input[type="checkbox"]')
-               //預設都沒勾
-               let checked = false
-               checkBoxes.forEach( checkBox =>{
-               if( checkBox.checked){
+          //檢查勾選欄有沒有勾
+          const checkBoxes = document.querySelectorAll('input[type="checkbox"]')
+          let checked = false //
+          checkBoxes.forEach( checkBox => {
+               if(checkBox.checked){
                     checked = true
+                    return
                }
-               })
+          })
 
-               if(checked == false || innerChecked == false){
+
+          if(checked === false || innerChecked === false){
                alert(`請檢查所有欄位`) 
                e.preventDefault(); //預防跳轉
-               }else{
-               alert(`預約成功`) 
+               inputLight()
+               }else if( checked === true && innerChecked === true){
+                    //確認身分證格式是否正確
+                    const childId = document.querySelector('#childid').value
+                    const childidcheck =document.querySelector('#childidcheck').value
+                    //呼叫idCorrect() 有回傳值 回傳直如果是false 就要報錯
+                    let mark = idCorrect()
+                    if( childId != childidcheck ){
+                         e.preventDefault(); //預防跳轉
+                         alert(`請確認孩童身分證資訊`)
+                         inputLight()
+                    }else if( mark === false ){
+                         e.preventDefault(); //預防跳轉
+                         alert(`身分證格式不正確，請確認字數或英文大寫`)
+                         inputLight()
+                    }
                }
 
-               //將沒輸入的欄位框紅
+
+          function inputLight(){
                const inputs = document.querySelectorAll('input')          
                inputs.forEach( input => {
-               // input.classList.remove('error')
-               if( input.value === ''){
-                    input.classList.add('error')
-               }else{
-                    input.classList.remove('error')
-               }                   
-               
-               })
+                    // input.classList.remove('error')
+                    if( input.value === ''){
+                         input.classList.add('error')
+                    }else{
+                         input.classList.remove('error')
+                    }                   
+                    
+                    })
           }
-          
+
      })
-}        
+
+
+
+}     
 
 
 
