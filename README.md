@@ -35,13 +35,12 @@ SHANSHAN_CLINIC/
 │   ├── news.html
 │   ├── news.js
 │   └── style.css
-├── 5.1_choice/         # 選擇相關頁面
-├── 5.2_infoKeyIn/      # 資訊輸入頁面
-├── 5.3_search/         # 搜尋功能頁面
+├── 5.1_choice/         # 選擇看診時間頁面
+├── 5.2_infoKeyIn/      # 預約資訊輸入頁面
+├── 5.3_search/         # 搜尋預約功能頁面
 ├── general/            # 通用資源
 ├── img/                # 圖片資源
 ├── Revise/             # 修訂相關文件
-├── 01_戴雄偉.pdf       # 相關文檔
 ├── index.html          # 主頁面
 ├── index.js            # 主要 JavaScript
 ├── reset.css           # CSS 重置樣式
