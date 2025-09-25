@@ -21,13 +21,31 @@ https://ani-tw.github.io/shanshan_clinic/
 
 ##  專案結構
 ```bash
-shanshan_clinic/
+SHANSHAN_CLINIC/
+├── 1_homepage/         # 首頁相關文件
+├── 2_about_teams/      # 關於團隊頁面
+│   ├── about_teams.html
+│   ├── style.css
+│   └── teams.js
+├── 3_services/         # 服務項目頁面
+│   ├── services.html
+│   ├── service.js
+│   └── style.css
+├── 4_news/             # 消息/新聞頁面
+│   ├── news.html
+│   ├── news.js
+│   └── style.css
+├── 5.1_choice/         # 選擇相關頁面
+├── 5.2_infoKeyIn/      # 資訊輸入頁面
+├── 5.3_search/         # 搜尋功能頁面
+├── general/            # 通用資源
+├── img/                # 圖片資源
+├── Revise/             # 修訂相關文件
+├── 01_戴雄偉.pdf       # 相關文檔
 ├── index.html          # 主頁面
-├── assets/             # 靜態資源
-│   ├── css/           # 樣式文件
-│   ├── js/            # JavaScript 文件
-│   └── images/        # 圖片資源
-└── README.md          # 專案說明
+├── index.js            # 主要 JavaScript
+├── reset.css           # CSS 重置樣式
+└── style.css           # 主要樣式文件
 ```
 
 讓每個孩子都能在成長的路上，找到屬於自己的那座山 🌱
